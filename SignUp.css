@@ -15,55 +15,36 @@
 body {
       box-sizing: border-box;
       font-family: 'Lato', sans-serif;
+      background-color: var(--beige);
 }
 
 header {
       height: 10vh;
-}
-
-aside {
-      width: 40vw;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-}
-
-aside img {
-      height: 550px;
-      width: 550px;
-}
-
-.main {
-      display: flex;
       width: 100vw;
-      justify-content: space-evenly;
-      align-items: center;
-      height: 90vh;
 }
 
-.container {
-      width: 50vw;
-}
-
-.form {
+form {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-}
-
-.form form {
+      justify-content: center;
+      width: fit-content;
       background-color: var(--beige);
       border-radius: 2em;
-      box-shadow: 0px 1px 20px 2px rgb(0 0 0 / 10%);
+}
+
+main {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 }
 
 .title {
       color: var(--grey);
       font-weight: 600;
-      font-size: 1.75em;
-      padding: 0.75em;
+      font-size: 2em;
+      padding: 0.5em;
+      letter-spacing: 1px;
       text-align: center;
 }
 
@@ -83,7 +64,7 @@ aside img {
       width: 100%;
       border: none;
       outline: none;
-      padding: 1em 0;
+      padding: 0.5em 0;
       border-bottom: 2px solid var(--light-grey);
       font-size: 1.2em;
       color: var(--grey);
@@ -98,7 +79,7 @@ aside img {
       color: #fff;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 1.25em;
+      font-size: 1.5em;
       padding: 0.75em;
       letter-spacing: 1px;
       font-weight: 500;
@@ -111,8 +92,23 @@ aside img {
       box-shadow: 0px 0px 20px -3px rgb(0 0 0 / 10%);
 }
 
+.mainContent {
+      display: flex;
+      gap: 75px;
+}
+
+.content-2 {
+      background-color: var(--beige);
+      border-radius: 2em;
+}
+
+.content-2 .content {
+      border: 2px solid white;
+}
+
 .signUp {
       font-size: 1.05em;
+      margin: 1em 0em;
       letter-spacing: 1px;
       color: var(--grey);
 }
