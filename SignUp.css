@@ -58,6 +58,7 @@ main {
       color: var(--purple);
       font-weight: 400;
       font-size: 1.5em;
+      margin-left: 5px;
 }
 
 .input input {
@@ -68,6 +69,7 @@ main {
       border-bottom: 2px solid var(--light-grey);
       font-size: 1.2em;
       color: var(--grey);
+      margin-left: 5px;
 }
 
 .input input::placeholder {
@@ -116,4 +118,14 @@ main {
 .signUp a {
       text-decoration: none;
       color: var(--purple);
+}
+
+select{
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 0.5em 0;
+      border-bottom: 2px solid var(--light-grey);
+      font-size: 1.2em;
+      color: var(--grey);
 }
