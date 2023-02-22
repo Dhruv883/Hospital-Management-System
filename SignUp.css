@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
 
 :root {
-  --purple: #6534d9;
+  --teal: #017e7e;
   --beige: #f8f8f8;
   --grey: #6f7376;
   --light-grey: #e3e6e7;
@@ -21,6 +21,13 @@ body {
 header {
   height: 10vh;
   width: 100vw;
+  font-size: 2em;
+  color: var(--teal);
+}
+
+header img {
+  width: 10px;
+  height: 10px;
 }
 
 form {
@@ -40,7 +47,7 @@ main {
 }
 
 .title {
-  color: var(--grey);
+  color: var(--teal);
   font-weight: 600;
   font-size: 2em;
   padding: 0.5em;
@@ -55,7 +62,7 @@ main {
 .input span {
   margin-bottom: 5px;
   display: inline-block;
-  color: var(--purple);
+  color: var(--teal);
   font-weight: 400;
   font-size: 1.5em;
   margin-left: 5px;
@@ -77,7 +84,7 @@ main {
 }
 
 .input input[type="submit"] {
-  background: var(--purple);
+  background: var(--teal);
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
@@ -121,12 +128,13 @@ main {
 }
 
 .signUp a {
-  color: var(--purple);
+  color: var(--teal);
 }
 
 .signUp a:hover {
   text-decoration: none;
 }
+
 select {
   width: 100%;
   border: none;
