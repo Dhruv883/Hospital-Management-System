@@ -28,16 +28,15 @@ header {
   height: 10vh;
   display: flex;
   align-items: center;
-  padding: 1px;
   font-size: 2rem;
   font-weight: bolder;
   color: var(--teal);
-  margin: 5px 0px;
+  padding: 5px 0px;
 }
 
 header img {
   width: 60px;
-  margin: 0px 0px 0px 10px;
+  padding: 0px 0px 0px 10px;
 }
 
 aside {
@@ -55,7 +54,7 @@ aside img {
   width: 100vw;
   justify-content: space-evenly;
   align-items: center;
-  height: 90vh;
+  height: 88vh;
 }
 
 .container {

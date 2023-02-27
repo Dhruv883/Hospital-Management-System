@@ -42,12 +42,12 @@ nav ul li {
   border: none;
   background-color: #037272;
   color: #dbffff;
-  padding: 10px;
+  padding: 10px 20px;
   cursor: pointer;
   float: left;
   font-size: 16px;
   text-align: center;
-
+  border-radius: 10px;
   transition: 0.5s;
 }
 
