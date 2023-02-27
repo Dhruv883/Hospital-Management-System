@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@600&display=swap");
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font-family: "Figtree", sans-serif;
+  color: #037272;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  background-color: #dbffff;
+  height: 75px;
+}
+
+nav ul li {
+  padding: 0 15px;
+}
+
+.brand img {
+  width: 55px;
+  padding: 0 1px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.logsign button {
+  border: none;
+  background-color: #53a5a5;
+  color: #dbffff;
+  padding: 10px;
+  cursor: pointer;
+  float: left;
+  font-size: 16px;
+  text-align: center;
+
+  transition: 0.0000001s;
+}
+
+.logsign button:hover {
+  background-color: #037272;
+  font-size: 18px;
+}
