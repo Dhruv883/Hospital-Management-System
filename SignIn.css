@@ -17,6 +17,13 @@ body {
   font-family: "Figtree", sans-serif;
 }
 
+header a {
+  text-decoration: none;
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+}
+
 header {
   height: 10vh;
   display: flex;
