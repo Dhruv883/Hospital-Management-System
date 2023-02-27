@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@600&display=swap");
 
 :root {
   --teal: #037272;
@@ -14,16 +14,23 @@
 
 body {
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: "Figtree", sans-serif;
 }
 
 header {
   height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 1px;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: var(--teal);
+  margin: 5px 0px;
 }
 
 header img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  margin: 0px 0px 0px 10px;
 }
 
 aside {
