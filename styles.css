@@ -40,7 +40,7 @@ nav ul li {
 
 .logsign button {
   border: none;
-  background-color: #53a5a5;
+  background-color: #037272;
   color: #dbffff;
   padding: 10px;
   cursor: pointer;
@@ -48,7 +48,7 @@ nav ul li {
   font-size: 16px;
   text-align: center;
 
-  transition: 0.0000001s;
+  transition: 0.5s;
 }
 
 .logsign button:hover {
