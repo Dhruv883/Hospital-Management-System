@@ -55,7 +55,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 88vh;
 }
 
 .title {
@@ -121,6 +120,7 @@ main {
 .mainContent {
   display: flex;
   gap: 75px;
+  border-radius: 100px;
 }
 
 .content-2 {
