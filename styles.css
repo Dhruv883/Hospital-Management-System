@@ -27,6 +27,16 @@ nav ul li {
   font-weight: 400;
 }
 
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a :hover:not(:nth-child(1)) {
+  color: #fcbf02;
+  cursor: pointer;
+}
+
 .brand img {
   width: 55px;
   padding: 0 1px;
@@ -57,11 +67,6 @@ nav ul li {
   font-size: 18px;
   border-color: #fcbf02;
   color: #fcbf02;
-}
-
-li:hover:not(:nth-child(1)) {
-  color: #fcbf02;
-  cursor: pointer;
 }
 
 .home-img img {
