@@ -83,23 +83,91 @@ nav ul div:nth-child(2) {
 
 /* =================================================== */
 
-.doctype {
+.container {
+  margin: 40px auto;
   /* border: solid; */
-  width: 150vh;
-
-  margin: 20px auto;
+  width: 180vh;
   height: 1000px;
-  display: flex;
+  border-radius: 30px;
 
-  border-radius: 20px;
-  box-shadow: 0px 0px 20px 0px grey;
-  padding: 10px;
+  box-shadow: 0px 0px 20px 1px rgb(81 81 81);
 }
 
-.title {
-  color: rgb(3 114 114);
+.speciality {
+  text-align: center;
+
   font-family: "Figtree", sans-serif;
-  font-size: 2rem;
   font-weight: bolder;
-  margin: 10px auto;
+  font-size: 2rem;
+  color: #037272;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.gof2 {
+  margin: 20px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.doc {
+  display: flex;
+  align-items: center;
+  /* background-color: rgb(192, 192, 192); */
+  padding: 20px 0px 20px 0px;
+  width: 85vh;
+  margin: auto;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px 1px rgb(169, 168, 168);
+  height: 122px;
+}
+
+.docinfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+  font-family: "Figtree", sans-serif;
+  color: #037272;
+}
+
+.docinfo img {
+  width: 133px;
+  border-radius: 200px;
+  border: solid #037272;
+  margin: 20px;
+}
+
+.docinfo ul {
+  list-style-type: none;
+}
+
+.bookappointment {
+  margin: 20px;
+}
+
+.vl {
+  border-left: 6px solid #037272;
+  border-radius: 100px;
+  height: 125px;
+}
+
+.bookappointment button {
+  border: solid #037272;
+  background-color: #037272;
+  color: white;
+  padding: 10px 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.bookappointment button:hover {
+  background-color: white;
+  color: #037272;
+  /* border: solid #037272; */
 }
