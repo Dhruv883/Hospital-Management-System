@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@200;300;400;500&display=swap");
+
+:root {
+  --grey: #767676;
+  --yellow: #fcbf02;
+  --bgColor: #037272;
+  --light-blue: #edffff;
+  --sky-blue: #3c9090;
+  --dark-grey: #45494c;
+  /* --text-shadow: 0.15rem 0.15rem 0 rgba(0, 0, 0, 0.2); */
+}
 
 body {
   background-color: rgb(255, 255, 255);
@@ -12,19 +23,36 @@ body {
 nav {
   font-family: "Figtree", sans-serif;
   color: #ffffff;
+  /* position: sticky;
+  top: 0px; */
 }
 
 nav ul {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   list-style-type: none;
-  background-color: rgb(3 114 114);
+  background-color: var(--bgColor);
   height: 75px;
+  padding: 0px 10px;
 }
 
-nav ul li {
+nav ul div {
+  display: flex;
+}
+
+nav ul div li {
   padding: 0 15px;
   font-weight: 400;
+}
+
+nav ul div li a:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+nav ul div:nth-child(2) {
+  font-size: 1.2rem;
 }
 
 .brand img {
@@ -54,9 +82,10 @@ nav ul li {
 }
 
 .logsign button:hover {
-  font-size: 18px;
-  border-color: #fcbf02;
-  color: #fcbf02;
+  transition: 0.3s;
+  transform: scale(1.05);
+  border-color: var(--yellow);
+  color: var(--yellow);
 }
 
 .home-img img {
@@ -68,7 +97,279 @@ a {
   color: white;
 }
 
-nav ul li a:hover {
-  color: #fcbf02;
-  cursor: pointer;
+/*------------------------------------ HOME SECTION ------------------------------------*/
+
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home1 {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  padding: 7.6rem 2rem;
+  background: url(images/blob-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image img {
+  width: 50vw;
+}
+
+.content {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.content h3 {
+  color: var(--dark-grey);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  text-shadow: var(--text-shadow);
+}
+
+.content p {
+  font-size: 1.25rem;
+  color: var(--dark-grey);
+  font-family: "Montserrat", sans-serif;
+  font-family: 400;
+}
+
+.content a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+  background: var(--sky-blue);
+  padding: 10px;
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.content a:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
+
+.home-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--sky-blue);
+  border-radius: 5px;
+  gap: 1rem;
+  padding: 1.5rem;
+  font-family: "Figtree", sans-serif;
+  width: 16vw;
+}
+
+.card div {
+  /* border: 1px solid green; */
+  text-align: center;
+}
+
+.card div:nth-child(2) {
+  font-size: 3rem;
+  color: var(--dark-grey);
+  font-weight: 700;
+}
+
+.card div:nth-child(3) {
+  color: var(--grey);
+  font-size: 1.25rem;
+  font-weight: 200;
+}
+
+/*----------------------------------- ABOUT SECTION ------------------------------------*/
+
+.about {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  gap: 3rem;
+  padding: 1rem 0rem;
+}
+
+.about-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: var(--dark-grey);
+  text-shadow: var(--text-shadow);
+}
+
+.about-title span {
+  color: var(--bgColor);
+}
+
+.about1 {
+  background: url(images/blob-scene-2-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  /* border: 2px solid purple; */
+}
+
+.about1-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.about-image img {
+  width: 40vw;
+}
+
+.about-content {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.about-content h3 {
+  color: var(--dark-grey);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.8;
+  text-shadow: var(--text-shadow);
+}
+
+.about-content p {
+  font-size: 1.25rem;
+  color: var(--dark-grey);
+  font-family: "Montserrat", sans-serif;
+  font-family: 500;
+}
+
+/*-------------------------------- ABOUT / CARD SECTION --------------------------------*/
+
+.about-card-section {
+  background: url(images/stacked-waves-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  gap: 4rem;
+  padding: 3rem 0rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  /* color: var(--sky-blue); */
+  color: #7ff2e5;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.cardTitle {
+  color: #51b7b7;
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+.steps {
+  background-color: var(--light-blue);
+  width: 230px;
+  /* box-shadow: 0 14px 28px #f4f4f4, 0 10px 10px #f4f4f4; */
+}
+
+.steps:hover {
+  transition: 0.25s;
+  transform: scale(1.01);
+}
+
+.steps div {
+  padding: 20px 15px;
+}
+
+.img {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  background-color: #ffffff;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+/*----------------------------------- CONTACT-US SECTION --------------------------------*/
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: var(--dark-grey);
+}
+.contact-title span {
+  color: var(--bgColor);
+}
+
+.contact-options {
+  border: 2px solid greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.option-card {
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  font-family: "Figtree", sans-serif;
+  width: 200px;
+}
+
+.option-card .option {
+  font-size: 1.75rem;
 }
