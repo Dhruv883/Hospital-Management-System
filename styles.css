@@ -409,7 +409,29 @@ textarea {
 
 /*----------------------------------- RESPONSIVE --------------------------------*/
 
-@media (max-width: 426px) {
+@media (max-width: 860px) {
+  nav {
+    display: none;
+  }
+
+  /* 
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    padding: 0;
+  } */
+
+  /* .hamburger {
+    display: block;
+    cursor: pointer;
+  } */
+}
+
+@media (max-width: 620px) {
   /* nav ul div:not(:nth-child(1)) {
     display: none;
   } */
@@ -450,16 +472,16 @@ textarea {
   }
 
   .content h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .content p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 400;
   }
 
   .content a {
-    font-size: 1rem;
+    font-size: 1.5rem;
     border-radius: 10px;
   }
 
@@ -470,16 +492,16 @@ textarea {
   }
 
   .card {
-    gap: 0.5rem;
-    width: 65vw;
+    gap: 1rem;
+    width: 60vw;
   }
 
   .card div:nth-child(2) {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .card div:nth-child(3) {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .about-image {
@@ -504,12 +526,12 @@ textarea {
   }
 
   .about-content h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 1;
   }
 
   .about-content p {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   /*-------------------------------- ABOUT / CARD SECTION --------------------------------*/
@@ -522,7 +544,7 @@ textarea {
   }
 
   .title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--sky-blue);
   }
 
@@ -537,7 +559,7 @@ textarea {
 
   .steps {
     background-color: var(--light-blue);
-    width: 230px;
+    width: 245px;
     box-shadow: 0 14px 28px #f4f4f4, 0 10px 10px #f4f4f4;
   }
 
@@ -546,23 +568,50 @@ textarea {
   }
 }
 
-/* @media (max-width: 860px) {
-  
-
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+@media (max-width: 426px) {
+  .content {
+    padding: 2rem;
+    width: fit-content;
   }
 
-  nav ul {
-    padding: 0;
+  .content h3 {
+    font-size: 2rem;
   }
 
-  .hamburger {
-    display: block;
-    cursor: pointer;
+  .content p {
+    font-size: 1.1rem;
   }
 
- 
-} */
+  .content a {
+    font-size: 1rem;
+  }
+
+  .card {
+    gap: 0.5rem;
+    width: 65vw;
+  }
+
+  .card div:nth-child(2) {
+    font-size: 2.2rem;
+  }
+
+  .card div:nth-child(3) {
+    font-size: 1rem;
+  }
+
+  .about-content h3 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .steps {
+    width: 230px;
+  }
+}
