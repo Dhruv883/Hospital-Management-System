@@ -410,7 +410,11 @@ textarea {
 /*----------------------------------- RESPONSIVE --------------------------------*/
 
 @media (max-width: 426px) {
-  nav ul div:not(:nth-child(1)) {
+  /* nav ul div:not(:nth-child(1)) {
+    display: none;
+  } */
+
+  nav {
     display: none;
   }
 
@@ -560,4 +564,5 @@ textarea {
     cursor: pointer;
   }
 
+ 
 } */
