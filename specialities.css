@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap");
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font-family: "Figtree", sans-serif;
+  color: #ffffff;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  background-color: #037272;
+  height: 75px;
+}
+
+nav ul li {
+  padding: 0 15px;
+  font-weight: 400;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a :hover:not(:nth-child(1)) {
+  color: #fcbf02;
+  cursor: pointer;
+}
+.brand img {
+  width: 55px;
+  padding: 0 1px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.logsign button {
+  border: solid;
+  border-color: white;
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.logsign button:hover {
+  font-size: 18px;
+  border-color: #fcbf02;
+  color: #fcbf02;
+}
+
+/* ============================================ */
+
+.gof4 {
+  border-style: none;
+  margin: 40px auto;
+  /* border: solid rgb(0, 0, 0); */
+  height: 400px;
+  width: 180vh;
+  display: flex;
+}
+
+.spname {
+  margin: 50px;
+  width: 250px;
+  height: 320px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+
+  text-align: center;
+  box-shadow: 0px 0px 20px 1px rgb(81 81 81);
+  transition: 0.1s;
+}
+.spname a {
+  text-decoration: none;
+}
+
+.spname ul {
+  list-style-type: none;
+  font-family: "Figtree", sans-serif;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: #037272;
+}
+
+.spname ul li img {
+  width: 250px;
+}
+
+.spname:hover {
+}
