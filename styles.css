@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@100;200;300;400;500&display=swap");
 
 :root {
   --grey: #767676;
@@ -12,27 +12,32 @@
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 nav {
   font-family: "Figtree", sans-serif;
   color: #ffffff;
+  background-color: var(--bgColor);
   /* position: sticky;
   top: 0px; */
 }
+
+/* .hamburger {
+  display: none;
+} */
 
 nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style-type: none;
-  background-color: var(--bgColor);
   height: 75px;
   padding: 0px 10px;
 }
@@ -173,7 +178,7 @@ a {
   justify-content: center;
   align-items: center;
   border: 2px solid var(--sky-blue);
-  border-radius: 5px;
+  border-radius: 10px;
   gap: 1rem;
   padding: 1.5rem;
   font-family: "Figtree", sans-serif;
@@ -339,6 +344,9 @@ a {
   border: 2px solid red;
   gap: 3rem;
   padding: 1rem;
+  /* background: url(images/blob-scene-2-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .contact-title {
@@ -347,29 +355,209 @@ a {
   font-weight: 500;
   color: var(--dark-grey);
 }
+
 .contact-title span {
   color: var(--bgColor);
+  text-shadow: var(--text-shadow);
 }
 
 .contact-options {
-  border: 2px solid greenyellow;
+  /* border: 1px solid greenyellow; */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  /* box-shadow: ; */
 }
 
 .option-card {
-  border: 2px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  font-family: "Figtree", sans-serif;
-  width: 200px;
+  font-family: "Montserrat", sans-serif;
+  width: 270px;
+  gap: 1rem;
+  background-color: #f9f9f9;
+  color: #212529;
+  border-radius: 10px;
 }
 
-.option-card .option {
-  font-size: 1.75rem;
+.option {
+  font-size: 2rem;
 }
+
+.option-info {
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.option-info span {
+  font-weight: 500;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/*----------------------------------- RESPONSIVE --------------------------------*/
+
+@media (max-width: 426px) {
+  nav ul div:not(:nth-child(1)) {
+    display: none;
+  }
+
+  body {
+    width: 100vw;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .home {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    width: 70vw;
+    /* border: 2px solid red; */
+  }
+
+  .home1 {
+    padding: 0rem;
+    background: none;
+    justify-content: center;
+    /* border: 2px solid red; */
+  }
+
+  .content {
+    padding: 2rem;
+    width: fit-content;
+  }
+
+  .content h3 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+
+  .content a {
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+
+  .home-cards {
+    flex-direction: column;
+    gap: 2rem;
+    /* display: none; */
+  }
+
+  .card {
+    gap: 0.5rem;
+    width: 65vw;
+  }
+
+  .card div:nth-child(2) {
+    font-size: 2.2rem;
+  }
+
+  .card div:nth-child(3) {
+    font-size: 1rem;
+  }
+
+  .about-image {
+    display: none;
+  }
+
+  .about {
+    /* border: 2px solid red; */
+    gap: 1rem;
+  }
+
+  .about1 {
+    background: none;
+    gap: 1.75rem;
+    /* border: 2px solid purple; */
+  }
+
+  .about-content {
+    width: fit-content;
+    padding: 0 2rem;
+    /* border: 2px solid red; */
+  }
+
+  .about-content h3 {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  /*-------------------------------- ABOUT / CARD SECTION --------------------------------*/
+
+  .about-card-section {
+    background: none;
+    /* border: 2px solid red; */
+    gap: 3rem;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    color: var(--sky-blue);
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .cardTitle {
+    font-size: 2.2em;
+  }
+
+  .steps {
+    background-color: var(--light-blue);
+    width: 230px;
+    box-shadow: 0 14px 28px #f4f4f4, 0 10px 10px #f4f4f4;
+  }
+
+  .contact-us {
+    display: none;
+  }
+}
+
+/* @media (max-width: 860px) {
+  
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+} */
