@@ -168,8 +168,6 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card {
@@ -182,7 +180,7 @@ a {
   gap: 1rem;
   padding: 1.5rem;
   font-family: "Figtree", sans-serif;
-  width: 16vw;
+  width: 20vw;
 }
 
 .card div {
