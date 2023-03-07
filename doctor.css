@@ -12,30 +12,43 @@ body {
 nav {
   font-family: "Figtree", sans-serif;
   color: #ffffff;
+  position: sticky;
+  top: 0;
 }
 
 nav ul {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   list-style-type: none;
   background-color: #037272;
   height: 75px;
+  padding: 0px 10px;
 }
 
-nav ul li {
+nav ul div {
+  display: flex;
+}
+
+nav ul div li {
   padding: 0 15px;
   font-weight: 400;
 }
 
-nav ul li a {
+nav ul div li a {
   text-decoration: none;
   color: white;
 }
 
-nav ul li a :hover:not(:nth-child(1)) {
+nav ul div li a:hover {
   color: #fcbf02;
   cursor: pointer;
 }
+
+nav ul div:nth-child(2) {
+  font-size: 1.2rem;
+}
+
 .brand img {
   width: 55px;
   padding: 0 1px;

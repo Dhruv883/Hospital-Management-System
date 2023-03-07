@@ -1,30 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@100;200;300;400;500&display=swap");
+
+:root {
+  --grey: #767676;
+  --yellow: #fcbf02;
+  --bgColor: #037272;
+  --light-blue: #edffff;
+  --sky-blue: #3c9090;
+  --dark-grey: #45494c;
+  /* --text-shadow: 0.15rem 0.15rem 0 rgba(0, 0, 0, 0.2); */
+}
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 nav {
   font-family: "Figtree", sans-serif;
   color: #ffffff;
+  background-color: var(--bgColor);
+  /* position: sticky;
+  top: 0px; */
 }
+
+/* .hamburger {
+  display: none;
+} */
 
 nav ul {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   list-style-type: none;
-  background-color: rgb(3 114 114);
   height: 75px;
+  padding: 0px 10px;
 }
 
-nav ul li {
+nav ul div {
+  display: flex;
+}
+
+nav ul div li {
   padding: 0 15px;
   font-weight: 400;
+}
+
+nav ul div li a:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+nav ul div:nth-child(2) {
+  font-size: 1.2rem;
 }
 
 .brand img {
@@ -54,9 +87,10 @@ nav ul li {
 }
 
 .logsign button:hover {
-  font-size: 18px;
-  border-color: #fcbf02;
-  color: #fcbf02;
+  transition: 0.3s;
+  transform: scale(1.05);
+  border-color: var(--yellow);
+  color: var(--yellow);
 }
 
 .home-img img {
@@ -68,7 +102,514 @@ a {
   color: white;
 }
 
-nav ul li a:hover {
-  color: #fcbf02;
-  cursor: pointer;
+/*------------------------------------ HOME SECTION ------------------------------------*/
+
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home1 {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  padding: 7.6rem 2rem;
+  background: url(images/blob-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image img {
+  width: 50vw;
+}
+
+.content {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.content h3 {
+  color: var(--dark-grey);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  text-shadow: var(--text-shadow);
+}
+
+.content p {
+  font-size: 1.25rem;
+  color: var(--dark-grey);
+  font-family: "Montserrat", sans-serif;
+  font-family: 400;
+}
+
+.content a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+  background: var(--sky-blue);
+  padding: 10px;
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.content a:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
+
+.home-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--sky-blue);
+  border-radius: 10px;
+  gap: 1rem;
+  padding: 1.5rem;
+  font-family: "Figtree", sans-serif;
+  width: 20vw;
+}
+
+.card div {
+  /* border: 1px solid green; */
+  text-align: center;
+}
+
+.card div:nth-child(2) {
+  font-size: 3rem;
+  color: var(--dark-grey);
+  font-weight: 700;
+}
+
+.card div:nth-child(3) {
+  color: var(--grey);
+  font-size: 1.25rem;
+  font-weight: 200;
+}
+
+/*----------------------------------- ABOUT SECTION ------------------------------------*/
+
+.about {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  gap: 3rem;
+  padding: 1rem 0rem;
+}
+
+.about-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: var(--dark-grey);
+  text-shadow: var(--text-shadow);
+}
+
+.about-title span {
+  color: var(--bgColor);
+}
+
+.about1 {
+  background: url(images/blob-scene-2-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  /* border: 2px solid purple; */
+}
+
+.about1-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.about-image img {
+  width: 40vw;
+}
+
+.about-content {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.about-content h3 {
+  color: var(--dark-grey);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.8;
+  text-shadow: var(--text-shadow);
+}
+
+.about-content p {
+  font-size: 1.25rem;
+  color: var(--dark-grey);
+  font-family: "Montserrat", sans-serif;
+  font-family: 500;
+}
+
+/*-------------------------------- ABOUT / CARD SECTION --------------------------------*/
+
+.about-card-section {
+  background: url(images/stacked-waves-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  gap: 4rem;
+  padding: 3rem 0rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  /* color: var(--sky-blue); */
+  color: #7ff2e5;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.cardTitle {
+  color: #51b7b7;
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+.steps {
+  background-color: var(--light-blue);
+  width: 230px;
+  /* box-shadow: 0 14px 28px #f4f4f4, 0 10px 10px #f4f4f4; */
+}
+
+.steps:hover {
+  transition: 0.25s;
+  transform: scale(1.01);
+}
+
+.steps div {
+  padding: 20px 15px;
+}
+
+.img {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  background-color: #ffffff;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+/*----------------------------------- CONTACT-US SECTION --------------------------------*/
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  gap: 3rem;
+  padding: 1rem;
+  /* background: url(images/blob-scene-2-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: var(--dark-grey);
+}
+
+.contact-title span {
+  color: var(--bgColor);
+  text-shadow: var(--text-shadow);
+}
+
+.contact-options {
+  /* border: 1px solid greenyellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  /* box-shadow: ; */
+}
+
+.option-card {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  width: 270px;
+  gap: 1rem;
+  background-color: #f9f9f9;
+  color: #212529;
+  border-radius: 10px;
+}
+
+.option {
+  font-size: 2rem;
+}
+
+.option-info {
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.option-info span {
+  font-weight: 500;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/*----------------------------------- RESPONSIVE --------------------------------*/
+
+@media (max-width: 860px) {
+  nav {
+    display: none;
+  }
+
+  /* 
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    padding: 0;
+  } */
+
+  /* .hamburger {
+    display: block;
+    cursor: pointer;
+  } */
+}
+
+@media (max-width: 620px) {
+  /* nav ul div:not(:nth-child(1)) {
+    display: none;
+  } */
+
+  nav {
+    display: none;
+  }
+
+  body {
+    width: 100vw;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .home {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    width: 70vw;
+    /* border: 2px solid red; */
+  }
+
+  .home1 {
+    padding: 0rem;
+    background: none;
+    justify-content: center;
+    /* border: 2px solid red; */
+  }
+
+  .content {
+    padding: 2rem;
+    width: fit-content;
+  }
+
+  .content h3 {
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .content a {
+    font-size: 1.5rem;
+    border-radius: 10px;
+  }
+
+  .home-cards {
+    flex-direction: column;
+    gap: 2rem;
+    /* display: none; */
+  }
+
+  .card {
+    gap: 1rem;
+    width: 60vw;
+  }
+
+  .card div:nth-child(2) {
+    font-size: 2.5rem;
+  }
+
+  .card div:nth-child(3) {
+    font-size: 1.5rem;
+  }
+
+  .about-image {
+    display: none;
+  }
+
+  .about {
+    /* border: 2px solid red; */
+    gap: 1rem;
+  }
+
+  .about1 {
+    background: none;
+    gap: 1.75rem;
+    /* border: 2px solid purple; */
+  }
+
+  .about-content {
+    width: fit-content;
+    padding: 0 2rem;
+    /* border: 2px solid red; */
+  }
+
+  .about-content h3 {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .about-content p {
+    font-size: 1.25rem;
+  }
+
+  /*-------------------------------- ABOUT / CARD SECTION --------------------------------*/
+
+  .about-card-section {
+    background: none;
+    /* border: 2px solid red; */
+    gap: 3rem;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    color: var(--sky-blue);
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .cardTitle {
+    font-size: 2.2em;
+  }
+
+  .steps {
+    background-color: var(--light-blue);
+    width: 245px;
+    box-shadow: 0 14px 28px #f4f4f4, 0 10px 10px #f4f4f4;
+  }
+
+  .contact-us {
+    display: none;
+  }
+}
+
+@media (max-width: 426px) {
+  .content {
+    padding: 2rem;
+    width: fit-content;
+  }
+
+  .content h3 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1.1rem;
+  }
+
+  .content a {
+    font-size: 1rem;
+  }
+
+  .card {
+    gap: 0.5rem;
+    width: 65vw;
+  }
+
+  .card div:nth-child(2) {
+    font-size: 2.2rem;
+  }
+
+  .card div:nth-child(3) {
+    font-size: 1rem;
+  }
+
+  .about-content h3 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .steps {
+    width: 230px;
+  }
 }
