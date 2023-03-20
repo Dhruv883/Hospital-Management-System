@@ -339,12 +339,12 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   gap: 3rem;
   padding: 1rem;
   /* background: url(images/blob-scene-2-haikei.svg);
-    background-repeat: no-repeat;
-    background-size: cover; */
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
 .contact-title {
@@ -374,13 +374,17 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.25rem;
   font-family: "Montserrat", sans-serif;
-  width: 270px;
+  width: 315px;
   gap: 1rem;
   background-color: #f9f9f9;
   color: #212529;
   border-radius: 10px;
+}
+
+.option-card:nth-child(2) {
+  line-height: 1.45;
 }
 
 .option {
@@ -403,6 +407,69 @@ a {
 
 textarea {
   resize: vertical;
+  width: 65vw;
+  padding: 6px 12px;
+  font-size: 1.15rem;
+  background-color: #f9f9f9;
+  outline: none;
+  border: none;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  height: 25vh;
+}
+
+textarea::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.input {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.input span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+}
+
+.input input {
+  display: block;
+  padding: 6px 12px;
+  width: 30vw;
+  font-size: 1.15rem;
+  background-color: #f9f9f9;
+  outline: none;
+  border: none;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.input input::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.grp1,
+.grp2 {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+
+.submit {
+  text-align: center;
+}
+
+.submit button {
+  font-size: 1.1rem;
+  padding: 3px 10px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #efa860;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
 }
 
 /*----------------------------------- RESPONSIVE --------------------------------*/
