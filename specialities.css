@@ -1,41 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap");
 
+:root {
+  --grey: #767676;
+  --yellow: #fcbf02;
+  --bgColor: #037272;
+  --light-blue: #edffff;
+  --sky-blue: #3c9090;
+  --dark-grey: #45494c;
+  /* --text-shadow: 0.15rem 0.15rem 0 rgba(0, 0, 0, 0.2); */
+}
+
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 nav {
   font-family: "Figtree", sans-serif;
   color: #ffffff;
+  background-color: var(--bgColor);
+  /* position: sticky;
+  top: 0px; */
 }
+
+/* .hamburger {
+  display: none;
+} */
 
 nav ul {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   list-style-type: none;
-  background-color: #037272;
   height: 75px;
+  padding: 0px 10px;
 }
 
-nav ul li {
+nav ul div {
+  display: flex;
+}
+
+nav ul div li {
   padding: 0 15px;
   font-weight: 400;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-}
-
-nav ul li a :hover:not(:nth-child(1)) {
-  color: #fcbf02;
+nav ul div li a:hover {
+  color: var(--yellow);
   cursor: pointer;
 }
+
+nav ul div:nth-child(2) {
+  font-size: 1.2rem;
+}
+
 .brand img {
   width: 55px;
   padding: 0 1px;
@@ -63,9 +86,19 @@ nav ul li a :hover:not(:nth-child(1)) {
 }
 
 .logsign button:hover {
-  font-size: 18px;
-  border-color: #fcbf02;
-  color: #fcbf02;
+  transition: 0.3s;
+  transform: scale(1.05);
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+.home-img img {
+  width: 900px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 /* ============================================ */
