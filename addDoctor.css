@@ -27,7 +27,7 @@ header {
   font-size: 2rem;
   font-weight: bolder;
   color: var(--teal);
-  margin-top: 5px;
+  margin: 5px 0px;
 }
 
 header img {
