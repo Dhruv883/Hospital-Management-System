@@ -271,9 +271,7 @@ a {
 /*-------------------------------- ABOUT / CARD SECTION --------------------------------*/
 
 .about-card-section {
-  background: url(images/stacked-waves-haikei.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #edffff;
   display: flex;
   flex-direction: column;
   /* border: 2px solid red; */
@@ -283,8 +281,7 @@ a {
 
 .title {
   font-size: 3.5rem;
-  /* color: var(--sky-blue); */
-  color: #7ff2e5;
+  color: var(--sky-blue);
   font-family: "Lato", sans-serif;
   text-align: center;
 }
@@ -307,7 +304,7 @@ a {
 .steps {
   background-color: var(--light-blue);
   width: 230px;
-  /* box-shadow: 0 14px 28px #f4f4f4, 0 10px 10px #f4f4f4; */
+  box-shadow: 0 10px 30px #b5d8e2;
 }
 
 .steps:hover {
