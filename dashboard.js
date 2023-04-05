@@ -10,7 +10,9 @@ hamburger.addEventListener("click", () => {
     sidebar.classList.contains("close")
   ) {
     header.setAttribute("style", "visibility : visible");
-  } else {
+  } else if (screen.width < 520) {
     header.setAttribute("style", "visibility : hidden");
+  } else {
+    header.setAttribute("style", "visibility : visible");
   }
 });
