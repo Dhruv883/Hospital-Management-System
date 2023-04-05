@@ -30,7 +30,6 @@ main {
   flex-direction: column;
   position: relative;
   z-index: 3;
-  border: 2px solid red;
 }
 
 .hambtn {
@@ -95,7 +94,6 @@ main {
 .main {
   height: 100vh;
   background-color: #fafafa;
-  border: 2px solid blue;
   max-width: calc(100vw - 80px);
 }
 
