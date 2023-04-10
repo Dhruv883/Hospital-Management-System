@@ -38,6 +38,11 @@ main {
   left: 250px;
 }
 
+.text {
+  color: var(--blue);
+  font-size: 1.1em;
+}
+
 .sidebar.close .hambtn {
   left: 80px;
 }
