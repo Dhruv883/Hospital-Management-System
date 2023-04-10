@@ -83,16 +83,6 @@ nav ul div:nth-child(2) {
 
 /* =================================================== */
 
-.container {
-  margin: 40px auto;
-  /* border: solid; */
-  width: 180vh;
-  height: 1000px;
-  border-radius: 30px;
-
-  box-shadow: 0px 0px 20px 1px rgb(81 81 81);
-}
-
 .speciality {
   text-align: center;
 
@@ -157,12 +147,12 @@ nav ul div:nth-child(2) {
   border: solid #037272;
   background-color: #037272;
   color: white;
-  padding: 10px 5px;
+  padding: 10px 0px;
   cursor: pointer;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: 0.3s;
 }
 
@@ -170,4 +160,8 @@ nav ul div:nth-child(2) {
   background-color: white;
   color: #037272;
   /* border: solid #037272; */
+}
+
+.name {
+  font-size: 1.75em;
 }
