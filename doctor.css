@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap");
 
+:root {
+  --grey: #767676;
+  --yellow: #fcbf02;
+  --bgColor: #037272;
+  --light-blue: #edffff;
+  --sky-blue: #3c9090;
+  --dark-grey: #45494c;
+}
+
 body {
   background-color: rgb(255, 255, 255);
 }
@@ -8,20 +17,23 @@ body {
   margin: 0;
   padding: 0;
 }
-
 nav {
   font-family: "Figtree", sans-serif;
   color: #ffffff;
-  position: sticky;
-  top: 0;
+  background-color: var(--bgColor);
+  /* position: sticky;
+  top: 0px; */
 }
+
+/* .hamburger {
+  display: none;
+} */
 
 nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style-type: none;
-  background-color: #037272;
   height: 75px;
   padding: 0px 10px;
 }
@@ -35,13 +47,8 @@ nav ul div li {
   font-weight: 400;
 }
 
-nav ul div li a {
-  text-decoration: none;
-  color: white;
-}
-
 nav ul div li a:hover {
-  color: #fcbf02;
+  color: var(--yellow);
   cursor: pointer;
 }
 
@@ -76,92 +83,104 @@ nav ul div:nth-child(2) {
 }
 
 .logsign button:hover {
-  font-size: 18px;
-  border-color: #fcbf02;
-  color: #fcbf02;
+  transition: 0.3s;
+  transform: scale(1.05);
+  border-color: var(--yellow);
+  color: var(--yellow);
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
 /* =================================================== */
 
 .speciality {
   text-align: center;
-
   font-family: "Figtree", sans-serif;
   font-weight: bolder;
-  font-size: 2rem;
-  color: #037272;
+  font-size: 3rem;
+  color: var(--bgColor);
   display: flex;
   justify-content: center;
-  padding-top: 10px;
+  padding: 0.35em;
 }
 
-.gof2 {
-  margin: 20px 20px;
+.list {
+  width: 100vw;
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "Figtree", sans-serif;
+  gap: 2.5em;
+  padding: 10px 0px;
 }
 
 .doc {
+  width: 540px;
+  max-width: 550px;
   display: flex;
   align-items: center;
-  /* background-color: rgb(192, 192, 192); */
-  padding: 20px 0px 20px 0px;
-  width: 85vh;
-  margin: auto;
-  border-radius: 30px;
-  box-shadow: 0px 0px 20px 1px rgb(169, 168, 168);
-  height: 122px;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 5px;
+  /* border: 2px solid red; */
+  gap: 1em;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
 }
 
 .docinfo {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  margin: 20px;
-  font-family: "Figtree", sans-serif;
   color: #037272;
+  gap: 5px;
 }
 
-.docinfo img {
-  width: 133px;
-  border-radius: 200px;
-  border: solid #037272;
-  margin: 20px;
+.docinfo span:not(:nth-child(1)) {
+  font-size: 1.2em;
 }
 
-.docinfo ul {
-  list-style-type: none;
+.docinfo span:nth-child(1) {
+  max-width: 175px;
 }
 
-.bookappointment {
-  margin: 20px;
+.doc img {
+  width: 130px;
+  border-radius: 100%;
+  border: solid var(--bgColor);
+}
+
+.name {
+  font-size: 1.8em;
 }
 
 .vl {
-  border-left: 6px solid #037272;
+  border-left: 5px solid #037272 !important;
   border-radius: 100px;
   height: 125px;
 }
 
 .bookappointment button {
-  border: solid #037272;
-  background-color: #037272;
+  width: 165px;
+  border: 2px solid var(--bgColor);
+  background-color: var(--bgColor);
   color: white;
-  padding: 10px 0px;
+  padding: 10px 5px;
   cursor: pointer;
-  font-weight: 500;
-  font-size: 18px;
-  text-align: center;
+  font-size: 1.3em;
   border-radius: 5px;
-  transition: 0.3s;
 }
 
 .bookappointment button:hover {
+  transition: 0.3s;
   background-color: white;
   color: #037272;
-  /* border: solid #037272; */
 }
 
-.name {
-  font-size: 1.75em;
+@media (max-width: 425px) {
+  nav {
+    display: none;
+  }
 }
