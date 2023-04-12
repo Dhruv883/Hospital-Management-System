@@ -120,6 +120,8 @@ a {
 .doc {
   width: 540px;
   max-width: 550px;
+  height: 170px;
+  max-height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,7 +137,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   color: #037272;
-  gap: 5px;
+  gap: 0.8em;
 }
 
 .docinfo span:not(:nth-child(1)) {
@@ -153,7 +155,7 @@ a {
 }
 
 .name {
-  font-size: 1.8em;
+  font-size: 2em;
 }
 
 .vl {
@@ -163,23 +165,84 @@ a {
 }
 
 .bookappointment button {
-  width: 165px;
+  width: 150px;
   border: 2px solid var(--bgColor);
   background-color: var(--bgColor);
   color: white;
   padding: 10px 5px;
   cursor: pointer;
   font-size: 1.3em;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .bookappointment button:hover {
   transition: 0.3s;
   background-color: white;
   color: #037272;
+  box-shadow: none;
 }
 
-@media (max-width: 425px) {
+/* RESPONSIVE */
+
+@media (max-width: 320px) {
+  .list {
+    padding: 0;
+  }
+}
+
+@media (max-width: 426px) {
+  .list {
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .doc {
+    width: 270px;
+    max-width: 300px;
+    min-height: 425px;
+    max-height: 500px;
+    flex-direction: column;
+  }
+
+  .docinfo span:nth-child(1) {
+    gap: 0.5em;
+  }
+
+  .docinfo span:nth-child(1) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .docinfo span:nth-child(1) {
+    max-width: 300px;
+    max-height: 200px;
+  }
+
+  .doc img {
+    width: 130px;
+    border-radius: 100%;
+    border: solid var(--bgColor);
+  }
+
+  .vl {
+    border-left: none !important;
+    border-bottom: 5px solid #037272 !important;
+    width: 80%;
+    height: 0;
+  }
+
+  .bookappointment button {
+    width: 150px;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 600px) {
+}
+
+@media (max-width: 768px) {
   nav {
     display: none;
   }
