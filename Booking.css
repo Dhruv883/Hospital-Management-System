@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap");
+
+:root {
+  --grey: #767676;
+  --yellow: #fcbf02;
+  --bgColor: #037272;
+  --light-blue: #edffff;
+  --sky-blue: #3c9090;
+  --dark-grey: #45494c;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Figtree";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+}
+
+nav {
+  font-family: "Figtree", sans-serif;
+  color: #ffffff;
+  background-color: var(--bgColor);
+  /* position: sticky;
+  top: 0px; */
+}
+
+/* .hamburger {
+  display: none;
+} */
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  height: 75px;
+  padding: 0px 10px;
+}
+
+nav ul div {
+  display: flex;
+}
+
+nav ul div li {
+  padding: 0 15px;
+  font-weight: 400;
+}
+
+nav ul div li a:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+nav ul div:nth-child(2) {
+  font-size: 1.2rem;
+}
+
+.brand img {
+  width: 55px;
+  padding: 0 1px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.logsign button {
+  border: solid;
+  border-color: white;
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.logsign button:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.docImg {
+  display: flex;
+  justify-content: center;
+}
+
+.card img {
+  width: 16rem;
+}
+
+.doc {
+  width: 250px;
+  max-width: 300px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 5px;
+  gap: 1em;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.docinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* color: #037272; */
+  gap: 0.8em;
+}
+
+.docinfo span:not(:nth-child(1)) {
+  font-size: 1.2em;
+}
+
+.docinfo span:nth-child(1) {
+  max-width: 175px;
+}
+
+.doc img {
+  width: 130px;
+  border-radius: 100%;
+  border: 1px solid var(--grey);
+}
+
+.name {
+  font-size: 2em;
+}
+
+.docinfo {
+  padding: 1em;
+}
+
+.docInfo {
+  display: flex;
+  width: 25vw;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0.5em 0em;
+}
+
+.about {
+  width: 250px;
+  max-width: 300px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.about span {
+  font-size: 1.5em;
+}
+
+.about p {
+  font-size: 1em;
+  color: var(--grey);
+}
+
+.schedule {
+  border: 2px solid red;
+  width: 75vw;
+  padding: 1em;
+}
+
+.fees {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fees span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.fees span a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: black;
+}
