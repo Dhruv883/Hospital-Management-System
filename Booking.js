@@ -9,6 +9,11 @@ const nextMonth = document.getElementById("nextmonth"),
 
 const slots = document.querySelectorAll(".slot");
 
+const swiper = new Swiper(".swiper", {
+  slidesPerView: 7,
+  speed: 600,
+});
+
 let today = new Date();
 let currentmonth = today.getMonth();
 let year = today.getFullYear();
@@ -28,6 +33,13 @@ const monthlist = [
   "November",
   "December",
 ];
+
+prevDay.addEventListener("click", () => {
+  swiper.slidePrev(400, true);
+});
+nextDay.addEventListener("click", () => {
+  swiper.slideNext(400, true);
+});
 
 function init() {
   month.innerText = monthlist[currentmonth] + " " + year;

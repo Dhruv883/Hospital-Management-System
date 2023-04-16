@@ -248,10 +248,10 @@ a {
   cursor: pointer;
 }
 
-.weekdays > span:nth-child(2) {
+.weekdays > span:nth-child(2) div {
   display: flex;
   align-items: center;
-  gap: 1.25em;
+  gap: 1.24em;
 }
 
 .weekdays > span:nth-child(2) span {
@@ -268,6 +268,13 @@ a {
   border: 1px solid var(--sky-blue);
   background-color: var(--sky-blue);
   color: white;
+}
+
+.swiper {
+  width: 665px;
+}
+.swiper-slide {
+  width: auto !important;
 }
 
 .slots {
