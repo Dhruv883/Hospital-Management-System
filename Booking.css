@@ -202,13 +202,14 @@ a {
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
+  color: var(--dark-grey);
 }
 
 .fees span a {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: black;
+  color: var(--dark-grey);
 }
 
 .dates {
