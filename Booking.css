@@ -208,13 +208,12 @@ a {
 }
 
 .dates {
-  border: 1px solid red;
   padding: 1em 0.5em;
 }
 
-.dates div {
+/* .dates div {
   border: 1px solid blueviolet;
-}
+} */
 
 .month {
   display: flex;
@@ -240,6 +239,10 @@ a {
   padding: 1em;
 }
 
+.weekdays img {
+  cursor: pointer;
+}
+
 .weekdays > span:nth-child(2) {
   display: flex;
   align-items: center;
@@ -257,6 +260,62 @@ a {
 }
 
 .weekdays > span:nth-child(2) span:hover {
+  border: 1px solid var(--sky-blue);
+  background-color: var(--sky-blue);
+  color: white;
+}
+
+.slots {
+  padding: 0.5em 1em;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25em;
+  color: var(--dark-grey);
+  border-bottom: 1px solid var(--grey);
+  padding: 0.5em 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5em;
+  color: var(--dark-grey);
+}
+
+.timings {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1.25em;
+  padding: 1em 0;
+}
+
+.timings div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25em;
+}
+
+.timings span {
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  border: 1px solid var(--bgColor);
+  background-color: white;
+  color: var(--bgColor);
+}
+
+.timings span:hover {
   border: 1px solid var(--sky-blue);
   background-color: var(--sky-blue);
   color: white;
