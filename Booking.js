@@ -14,10 +14,14 @@ const swiper = new Swiper(".swiper", {
   speed: 600,
 });
 
+const swiperWrapper = document.getElementById("swiper-wrapper");
+
 let today = new Date();
 let currentmonth = today.getMonth();
 let year = today.getFullYear();
 let activeDay;
+
+const daysCount = new Date(year, currentmonth, 0).getDate();
 
 const monthlist = [
   "January",
@@ -37,14 +41,22 @@ const monthlist = [
 prevDay.addEventListener("click", () => {
   swiper.slidePrev(400, true);
 });
+
 nextDay.addEventListener("click", () => {
   swiper.slideNext(400, true);
 });
 
-function init() {
+function calendarInit() {
   month.innerText = monthlist[currentmonth] + " " + year;
+
+  for (let i = 1; i <= daysCount; i++) {
+    let span = document.createElement("span");
+    span.innerText = i + " " + monthlist[currentmonth].slice(0, 3);
+    span.classList.add("swiper-slide");
+    swiperWrapper.append(span);
+  }
 }
 
 window.onload = () => {
-  init();
+  calendarInit();
 };
