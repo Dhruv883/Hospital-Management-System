@@ -21,7 +21,7 @@ let currentmonth = today.getMonth();
 let year = today.getFullYear();
 let activeDay;
 
-const daysCount = new Date(year, currentmonth, 0).getDate();
+const daysCount = new Date(year, currentmonth + 1, 0).getDate();
 
 const monthlist = [
   "January",
@@ -49,10 +49,18 @@ nextDay.addEventListener("click", () => {
 function calendarInit() {
   month.innerText = monthlist[currentmonth] + " " + year;
 
-  for (let i = 1; i <= daysCount; i++) {
+  for (let i = today.getDate(); i <= daysCount; i++) {
     let span = document.createElement("span");
     span.innerText = i + " " + monthlist[currentmonth].slice(0, 3);
     span.classList.add("swiper-slide");
+    swiperWrapper.append(span);
+  }
+
+  for (let i = 0; i < 3; i++) {
+    let span = document.createElement("span");
+    span.innerText = i + " " + monthlist[currentmonth].slice(0, 3);
+    span.classList.add("swiper-slide");
+    span.setAttribute("style", "visibility:hidden");
     swiperWrapper.append(span);
   }
 }

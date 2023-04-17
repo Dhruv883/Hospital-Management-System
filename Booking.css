@@ -185,40 +185,15 @@ a {
 
 .schedule {
   width: 75vw;
-  padding: 1em;
+  padding: 0.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.fees {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.fees span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5em;
-  color: var(--dark-grey);
-}
-
-.fees span a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--dark-grey);
-}
-
 .dates {
   padding: 0.5em;
 }
-
-/* .dates div {
-  border: 1px solid blueviolet;
-} */
 
 .month {
   display: flex;
@@ -273,6 +248,7 @@ a {
 .swiper {
   width: 665px;
 }
+
 .swiper-slide {
   width: auto !important;
 }
@@ -305,14 +281,14 @@ a {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 1.25em;
+  gap: 2em;
   padding: 1em 0;
 }
 
 .timings div {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25em;
+  gap: 0.75em;
 }
 
 .timings span {
@@ -337,9 +313,10 @@ a {
   text-align: center;
   background-color: var(--bgColor);
   color: white;
-  padding: 10px;
+  padding: 15px 10px;
   border-radius: 5px;
   cursor: pointer;
-  width: 250px;
+  width: 200px;
   font-size: 1.25em;
+  margin-top: 5px;
 }
