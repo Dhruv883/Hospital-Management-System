@@ -213,9 +213,10 @@ a {
 .about-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--dark-grey);
   text-shadow: var(--text-shadow);
+  margin-left: 267px;
 }
 
 .about-title span {
@@ -229,7 +230,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  text-align: start;
   gap: 2.5rem;
   /* border: 2px solid purple; */
 }
@@ -676,4 +678,73 @@ textarea::placeholder {
   .steps {
     width: 230px;
   }
+}
+
+/*-------------------------------- Reviews --------------------------------*/
+
+.reviews {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: 90vw;
+  height: 50vh;
+  margin: 100px auto;
+  /* background-color: var(--light-blue); */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.reviewerimg img {
+  width: 188px;
+  border: solid #037272;
+  border-radius: 100px;
+}
+
+.reviewinfo {
+  width: 56vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 51px;
+}
+
+.reviewinfo h1 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--bgColor);
+  font-size: 2.5rem;
+  text-align: center;
+}
+.reviewinfo button {
+  width: 137px;
+  height: 64px;
+  padding: 2px;
+  font-size: 27px;
+  background-color: transparent;
+  border: solid var(--bgColor);
+  color: var(--bgColor);
+  border-radius: 5px;
+  font-family: sans-serif;
+  transition: 0.5s ease ease-out;
+}
+
+.reviewinfo button:hover {
+  background-color: var(--bgColor);
+  color: white;
+}
+
+.demoreview {
+  padding: 15px;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-family: "Montserrat", sans-serif;
+  color: #212529;
+  font-size: 1.5rem;
+  /* border: solid black; */
+  border-radius: 10px;
+  box-shadow: 0px 0px 45px -19px rgba(0, 0, 0, 0.75);
 }
