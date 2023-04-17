@@ -21,8 +21,6 @@ let currentmonth = today.getMonth();
 let year = today.getFullYear();
 let activeDay;
 
-const daysCount = new Date(year, currentmonth, 0).getDate();
-
 const monthlist = [
   "January",
   "February",
@@ -46,17 +44,49 @@ nextDay.addEventListener("click", () => {
   swiper.slideNext(400, true);
 });
 
-function calendarInit() {
-  month.innerText = monthlist[currentmonth] + " " + year;
+prevMonth.addEventListener("click", () => {
+  changePrevMonth();
+});
 
-  for (let i = 1; i <= daysCount; i++) {
+nextMonth.addEventListener("click", () => {
+  changeNextMonth();
+});
+
+function calendarInit(mon, yr) {
+  month.innerText = monthlist[mon] + " " + yr;
+  swiperWrapper.innerHTML = "";
+
+  for (let i = 1; i <= new Date(yr, mon + 1, 0).getDate(); i++) {
     let span = document.createElement("span");
     span.innerText = i + " " + monthlist[currentmonth].slice(0, 3);
     span.classList.add("swiper-slide");
     swiperWrapper.append(span);
   }
+
+  for (let i = 0; i < 6; i++) {
+    let span = document.createElement("span");
+    span.classList.add("swiper-slide");
+    span.setAttribute("style", "visibility:hidden");
+    swiperWrapper.append(span);
+  }
+}
+
+function changePrevMonth(params) {
+  currentmonth--;
+  if (currentmonth < today.getMonth()) {
+    currentmonth = today.getMonth();
+  }
+  calendarInit(currentmonth, year);
+}
+
+function changeNextMonth(params) {
+  currentmonth++;
+  if (currentmonth > 11) {
+    currentmonth = 11;
+  }
+  calendarInit(currentmonth, year);
 }
 
 window.onload = () => {
-  calendarInit();
+  calendarInit(currentmonth, year);
 };
