@@ -1,3 +1,55 @@
+
+<?php
+
+if (isset($_POST['submitbtn'])) {
+     
+      require 'database.php';
+     
+      $fname = $_POST['fname'];
+      $lname = $_POST['lname'];
+      $gender = $_POST['gender'];
+      $email = $_POST['email'];
+      $age = $_POST['age'];
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+      $cpassword = $_POST['cpassword'];
+
+      $exists = false;
+      $usercopy = "SELECT * FROM patient WHERE username='$username'";
+      if (mysqli_num_rows(mysqli_query($conn, $usercopy)) > 0) {
+        $exists = true;
+        echo "<script>alert('Username Already Exists!');</script>";
+      }
+      $emailcopy = "SELECT * FROM patient WHERE email='$email'";
+      if (mysqli_num_rows(mysqli_query($conn, $emailcopy)) > 0) {
+        $exists = true;
+        echo "<script>alert('Email Already Exists!');</script>";
+      }
+
+
+      if (!$exists) {
+
+       if($password != $cpassword ){
+            echo "<script>alert('Passwords are not same!');</script>";
+        }else{
+
+          $sql = "INSERT INTO patient (fname, lname, gender, email, age, username, password) VALUES ('$fname', '$lname', '$gender', '$email', $age, '$username', '$password')";
+
+          $result = mysqli_query($conn, $sql);
+
+          if(!$result){
+          echo 'Failed to connect';
+          }else{
+            header("Location:http://localhost/Hospital-Management-System/SignIn.html");
+          }
+
+        }
+      }
+}
+ 
+?> 
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +69,7 @@
           ></a
         >
       </header>
-      <form action="">
+      <form action="SignUp.php" method="post">
         <div class="mainContent">
           <div class="content-1">
             <div class="content">
@@ -28,6 +80,7 @@
                   placeholder="First name"
                   id="fname"
                   name="fname"
+                  max="15"
                   required
                 />
               </div>
@@ -38,13 +91,14 @@
                   placeholder="Last name"
                   id="lname"
                   name="lname"
+                  max="15"
                   required
                 />
               </div>
               <div class="input">
                 <span>Gender</span>
                 <select name="gender" id="gender" required>
-                  <option value="none" selected disabled hidden>
+                  <option value="" selected disabled hidden>
                     Select an Option
                   </option>
                   <option value="Male">Male</option>
@@ -108,18 +162,19 @@
                 />
               </div>
               <div class="input submit">
-                <input type="submit" value="Sign Up" name="" />
+                <input type="submit" value="Sign Up" name="submitbtn" />
               </div>
               <div class="signUp input">
                 <p>
                   Already have an account?
-                  <a href="./SignIn.html" class="a">Sign In</a>
+                  <a href="./SignIn.php" class="a">Sign In</a>
                 </p>
               </div>
             </div>
           </div>
         </div>
       </form>
-    </main>
+      
+    </main>         
   </body>
 </html>
