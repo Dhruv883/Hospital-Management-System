@@ -1,3 +1,7 @@
+<?php 
+  include('./partials/navbar.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,39 +13,12 @@
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <div>
-          <li class="brand">
-            <img src="images/whiteLogo.png" alt="Docplus" /><span class="ocplus"
-              >ocplus</span
-            >
-          </li>
-        </div>
-        <div>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./index.html#about">About</a></li>
-          <li><a href="#">Specialities</a></li>
-          <li><a href="./index.html#contactUs">Contact Us</a></li>
-        </div>
-        <div>
-          <li>
-            <div class="logsign">
-              <a href="SignIn.html"
-                ><button class="login">
-                  <span>Register / Sign In</span>
-                </button></a
-              >
-            </div>
-          </li>
-        </div>
-      </ul>
-    </nav>
+   
 
     <!-- -------------------------------------------------------------------------- -->
     <main>
       <div class="spname">
-        <a href="doctors.html">
+        <a href="doctors.php">
           <ul>
             <li><img src="images/pediatrician.jpg" alt="" /></li>
             <li>Pediatrician</li>
@@ -49,7 +26,7 @@
         </a>
       </div>
       <div class="spname">
-        <a href="doctors.html">
+        <a href="doctors.php">
           <ul>
             <li><img src="images/pediatrician.jpg" alt="" /></li>
             <li>Pediatrician</li>
@@ -57,7 +34,7 @@
         </a>
       </div>
       <div class="spname">
-        <a href="doctors.html">
+        <a href="doctors.php">
           <ul>
             <li><img src="images/pediatrician.jpg" alt="" /></li>
             <li>Pediatrician</li>
@@ -65,7 +42,7 @@
         </a>
       </div>
       <div class="spname">
-        <a href="doctors.html">
+        <a href="doctors.php">
           <ul>
             <li><img src="images/pediatrician.jpg" alt="" /></li>
             <li>Pediatrician</li>
@@ -73,7 +50,7 @@
         </a>
       </div>
       <div class="spname">
-        <a href="doctors.html">
+        <a href="doctors.php">
           <ul>
             <li><img src="images/pediatrician.jpg" alt="" /></li>
             <li>Pediatrician</li>
@@ -81,7 +58,7 @@
         </a>
       </div>
       <div class="spname">
-        <a href="doctors.html">
+        <a href="doctors.php">
           <ul>
             <li><img src="images/pediatrician.jpg" alt="" /></li>
             <li>Pediatrician</li>
@@ -89,7 +66,7 @@
         </a>
       </div>
       <div class="spname">
-        <a href="doctors.html">
+        <a href="doctors.php">
           <ul>
             <li><img src="images/pediatrician.jpg" alt="" /></li>
             <li>Pediatrician</li>
@@ -97,7 +74,7 @@
         </a>
       </div>
       <div class="spname">
-        <a href="doctors.html">
+        <a href="doctors.php">
           <ul>
             <li><img src="images/pediatrician.jpg" alt="" /></li>
             <li>Pediatrician</li>

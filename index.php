@@ -1,3 +1,7 @@
+<?php 
+  include('./partials/navbar.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,33 +15,7 @@
   <body>
     <!-- NAVBAR -->
 
-    <nav>
-      <ul>
-        <div>
-          <li class="brand">
-            <img src="images/whiteLogo.png" alt="Docplus" /><span class="ocplus"
-              >ocplus</span
-            >
-          </li>
-        </div>
-        <div>
-          <li><a href="">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="specialities.html">Specialities</a></li>
-        </div>
-        <div>
-          <li>
-            <div class="logsign">
-              <a href="SignIn.php"
-                ><button class="login">
-                  <span>Register / Sign In</span>
-                </button></a
-              >
-            </div>
-          </li>
-        </div>
-      </ul>
-    </nav>
+  
 
     <!-- HOME SECTION -->
 
@@ -123,7 +101,7 @@
         <div class="title">How does Docplus work ?</div>
 
         <div class="cards">
-          <a href="specialities.html">
+          <a href="specialities.php">
             <div class="steps step1">
               <div class="img">
                 <img src="images/search-svgrepo-com.svg" alt="" srcset="" />
@@ -134,7 +112,7 @@
               </div>
             </div>
           </a>
-          <a href="doctors.html">
+          <a href="doctors.php">
             <div class="steps step2">
               <div class="img">
                 <img src="images/calendar-svgrepo-com.svg" alt="" srcset="" />

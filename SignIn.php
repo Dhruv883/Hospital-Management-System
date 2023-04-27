@@ -1,3 +1,28 @@
+<?php
+  require('./database.php');
+
+  if (isset($_POST['submitbtn'])) {
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    // echo 'here';
+    // die();
+    $sql = "SELECT * FROM patient WHERE username = '$username' AND password = '$password'";
+    $res = mysqli_query($conn , $sql);
+    $rows = mysqli_num_rows($res);
+    if ($rows == 1) {
+      $_SESSION['patient'] = $username;
+      
+      header("Location:http://localhost/Hospital-Management-System/PatientDashboard.php");
+
+    }else{
+      echo "<script>alert('Username or password doesnt match');</script>";
+
+    }
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,7 +46,7 @@
       </aside>
       <div class="container">
         <div class="form">
-          <form action="">
+          <form action="SignIn.php" method="POST">
             <div class="title">Sign In</div>
             <div class="content">
               <div class="input">
@@ -29,8 +54,8 @@
                 <input
                   type="text"
                   placeholder="Username"
-                  id="name"
-                  name="name"
+                  id="username"
+                  name="username"
                   required
                 />
               </div>
@@ -45,7 +70,7 @@
                 />
               </div>
               <div class="input submit">
-                <input type="submit" value="Sign In" name="" />
+                <input type="submit" value="Sign In" name="submitbtn" />
               </div>
               <div class="signUp input">
                 <p>New User? <a href="./SignUp.php">Sign up</a></p>
