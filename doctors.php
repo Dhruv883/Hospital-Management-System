@@ -1,3 +1,7 @@
+<?php 
+  include('./partials/navbar.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,41 +13,34 @@
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <div>
-          <li class="brand">
-            <img src="images/whiteLogo.png" alt="Docplus" /><span class="ocplus"
-              >ocplus</span
-            >
-          </li>
-        </div>
-        <div>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="specialities.html">Specialities</a></li>
-          <li><a href="./index.html#contactUs">Contact Us</a></li>
-        </div>
-        <div>
-          <li>
-            <div class="logsign">
-              <a href="SignIn.html"
-                ><button class="login">
-                  <span>Register / Sign In</span>
-                </button></a
-              >
-            </div>
-          </li>
-        </div>
-      </ul>
-    </nav>
 
-    <!-- ================================================================================ -->
+    <?php 
+    include('./database.php');
+      if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $sql = "SELECT * FROM speciality where id = '$id'";
+        $res = mysqli_query($conn , $sql);
+        $row = mysqli_fetch_assoc($res);
+        $name = $row['name'];
+        
+        echo '<div class="speciality">'.$name.'</div>
 
-    <div class="speciality">Pediatrician</div>
-
-    <div class="list">
+      <div class="list">
       <div class="doc">
+          <div><img src="images/doctor.png" alt="" srcset="" /></div>
+          <div class="docinfo">
+          <span class="name">Dr. Xyz Abc</span>
+            <span>Pediatrician</span>
+            <span>0 YEAR Experience</span>
+            <span>MBBS</span>
+          </div>
+        <div class="vl"></div>
+        <div class="bookappointment">
+        <a href="Booking.html"><button>Book an Appointment</button></a>
+        </div>
+        </div>
+        
+        <div class="doc">
         <div><img src="images/doctor.png" alt="" srcset="" /></div>
         <div class="docinfo">
           <span class="name">Dr. Xyz Abc</span>
@@ -53,79 +50,69 @@
         </div>
         <div class="vl"></div>
         <div class="bookappointment">
-          <a href="Booking.html"><button>Book an Appointment</button></a>
+        <a href="Booking.html"><button>Book an Appointment</button></a>
         </div>
-      </div>
-
+        </div>
+        
       <div class="doc">
-        <div><img src="images/doctor.png" alt="" srcset="" /></div>
+      <div><img src="images/doctor.png" alt="" srcset="" /></div>
         <div class="docinfo">
           <span class="name">Dr. Xyz Abc</span>
           <span>Pediatrician</span>
           <span>0 YEAR Experience</span>
           <span>MBBS</span>
-        </div>
+          </div>
         <div class="vl"></div>
         <div class="bookappointment">
           <a href="Booking.html"><button>Book an Appointment</button></a>
-        </div>
+          </div>
       </div>
-
+      
+      <div class="doc">
+      <div><img src="images/doctor.png" alt="" srcset="" /></div>
+        <div class="docinfo">
+        <span class="name">Dr. Xyz Abc</span>
+        <span>Pediatrician</span>
+        <span>0 YEAR Experience</span>
+        <span>MBBS</span>
+        </div>
+        <div class="vl"></div>
+        <div class="bookappointment">
+        <a href="Booking.html"><button>Book an Appointment</button></a>
+        </div>
+        </div>
+      
       <div class="doc">
         <div><img src="images/doctor.png" alt="" srcset="" /></div>
         <div class="docinfo">
-          <span class="name">Dr. Xyz Abc</span>
-          <span>Pediatrician</span>
-          <span>0 YEAR Experience</span>
-          <span>MBBS</span>
+        <span class="name">Dr. Xyz Abc</span>
+        <span>Pediatrician</span>
+        <span>0 YEAR Experience</span>
+        <span>MBBS</span>
         </div>
         <div class="vl"></div>
         <div class="bookappointment">
-          <a href="Booking.html"><button>Book an Appointment</button></a>
+        <a href="Booking.html"><button>Book an Appointment</button></a>
         </div>
-      </div>
-
-      <div class="doc">
+        </div>
+      
+        <div class="doc">
         <div><img src="images/doctor.png" alt="" srcset="" /></div>
         <div class="docinfo">
-          <span class="name">Dr. Xyz Abc</span>
-          <span>Pediatrician</span>
-          <span>0 YEAR Experience</span>
-          <span>MBBS</span>
+        <span class="name">Dr. Xyz Abc</span>
+        <span>Pediatrician</span>
+        <span>0 YEAR Experience</span>
+        <span>MBBS</span>
         </div>
         <div class="vl"></div>
         <div class="bookappointment">
-          <a href="Booking.html"><button>Book an Appointment</button></a>
+        <a href="Booking.html"><button>Book an Appointment</button></a>
         </div>
-      </div>
-
-      <div class="doc">
-        <div><img src="images/doctor.png" alt="" srcset="" /></div>
-        <div class="docinfo">
-          <span class="name">Dr. Xyz Abc</span>
-          <span>Pediatrician</span>
-          <span>0 YEAR Experience</span>
-          <span>MBBS</span>
         </div>
-        <div class="vl"></div>
-        <div class="bookappointment">
-          <a href="Booking.html"><button>Book an Appointment</button></a>
-        </div>
-      </div>
-
-      <div class="doc">
-        <div><img src="images/doctor.png" alt="" srcset="" /></div>
-        <div class="docinfo">
-          <span class="name">Dr. Xyz Abc</span>
-          <span>Pediatrician</span>
-          <span>0 YEAR Experience</span>
-          <span>MBBS</span>
-        </div>
-        <div class="vl"></div>
-        <div class="bookappointment">
-          <a href="Booking.html"><button>Book an Appointment</button></a>
-        </div>
-      </div>
+        ';
+      }
+        ?>
     </div>
   </body>
-</html>
+  </html>
+  

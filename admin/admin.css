@@ -253,7 +253,7 @@ input[type="file"] {
 }
 
 .name {
-  width: 100px;
+  width: 300px;
 }
 
 .catcard .img {
@@ -271,7 +271,7 @@ input[type="file"] {
   display: flex;
   align-items: center;
   gap: 1.5em;
-  width: 350px;
+  /* width: 350px; */
 }
 
 .add {

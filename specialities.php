@@ -1,5 +1,6 @@
 <?php 
   include('./partials/navbar.php');
+  include('./database.php');
 ?>
 
 <!DOCTYPE html>
@@ -17,70 +18,31 @@
 
     <!-- -------------------------------------------------------------------------- -->
     <main>
-      <div class="spname">
-        <a href="doctors.php">
-          <ul>
-            <li><img src="images/pediatrician.jpg" alt="" /></li>
-            <li>Pediatrician</li>
-          </ul>
-        </a>
-      </div>
-      <div class="spname">
-        <a href="doctors.php">
-          <ul>
-            <li><img src="images/pediatrician.jpg" alt="" /></li>
-            <li>Pediatrician</li>
-          </ul>
-        </a>
-      </div>
-      <div class="spname">
-        <a href="doctors.php">
-          <ul>
-            <li><img src="images/pediatrician.jpg" alt="" /></li>
-            <li>Pediatrician</li>
-          </ul>
-        </a>
-      </div>
-      <div class="spname">
-        <a href="doctors.php">
-          <ul>
-            <li><img src="images/pediatrician.jpg" alt="" /></li>
-            <li>Pediatrician</li>
-          </ul>
-        </a>
-      </div>
-      <div class="spname">
-        <a href="doctors.php">
-          <ul>
-            <li><img src="images/pediatrician.jpg" alt="" /></li>
-            <li>Pediatrician</li>
-          </ul>
-        </a>
-      </div>
-      <div class="spname">
-        <a href="doctors.php">
-          <ul>
-            <li><img src="images/pediatrician.jpg" alt="" /></li>
-            <li>Pediatrician</li>
-          </ul>
-        </a>
-      </div>
-      <div class="spname">
-        <a href="doctors.php">
-          <ul>
-            <li><img src="images/pediatrician.jpg" alt="" /></li>
-            <li>Pediatrician</li>
-          </ul>
-        </a>
-      </div>
-      <div class="spname">
-        <a href="doctors.php">
-          <ul>
-            <li><img src="images/pediatrician.jpg" alt="" /></li>
-            <li>Pediatrician</li>
-          </ul>
-        </a>
-      </div>
+
+      <?php 
+        $sql = "SELECT * FROM  speciality";
+        $res = mysqli_query($conn , $sql);
+        $count =  mysqli_num_rows($res); 
+        if($count > 0){
+          while ($row = mysqli_fetch_assoc($res)) {
+            $name = $row['name'];
+            $img = $row['img'];
+            $id = $row['id'];
+            echo '
+            <div class="spname">
+            <a href="doctors.php?id='.$id.'">
+            <ul>
+            <li><img src="images/specialities/'.$img.'" alt="" /></li>
+            <li>'.$name.'</li>
+            </ul>
+            </a>
+            </div>
+            ';
+            
+          }
+        }
+      ?>
+      
     </main>
   </body>
 </html>

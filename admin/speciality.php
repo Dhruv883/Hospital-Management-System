@@ -34,8 +34,8 @@
                               <div class="img"><img src="../images/specialities/'.$img.'" alt="'.$name.'" srcset=""></div>
                               <div class="name">'.$name.'</div>
                               <div class="btns"> 
-                                    <div class="update"><a href="updateSpec.php?id='.$id.'&img='.$img.'&name='.$name.'"><button>Update Speciality</button></a></div>
-                                    <div class="delete"><a href="deleteSpec.php?id='.$id.'&img='.$img.'"><button>Delete Speciality</button></a></div>
+                                    <div class="update"><a href="updateSpec.php?id='.$id.'&img='.$img.'&name='.$name.'"><button>Update</button></a></div>
+                                    <div class="delete"><a href="deleteSpec.php?id='.$id.'&img='.$img.'"><button>Delete</button></a></div>
                               </div>
                               </div>
                               ';
