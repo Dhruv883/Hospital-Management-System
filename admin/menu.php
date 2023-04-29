@@ -1,6 +1,6 @@
 <?php 
   require('../database.php');
-  // include('auth.php'); 
+  include('auth.php'); 
   
 ?>
 

@@ -32,8 +32,6 @@
         
         if (!$exists) {
           
-          
-          
           $sql = "INSERT INTO doctor (fname, lname, speciality, age, email, username, password, description, experience) VALUES ('$fname', '$lname', '$speciality', $age, '$email', '$username', '$password', '$description', $experience)";
           
           $result = mysqli_query($conn, $sql);
