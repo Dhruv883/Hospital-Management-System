@@ -234,7 +234,7 @@
     <section class="reviews">
       <div class="reviewinfo">
         <h1>Our Patient's Stories</h1>
-        <a href="review.html"><button>View all</button></a>
+        <a href=""><button>View all</button></a>
       </div>
       <div class="demoreview">
         <div class="reviewerimg"><img src="images/reviewer.jpg" alt="" /></div>

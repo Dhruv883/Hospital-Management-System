@@ -22,7 +22,7 @@ main {
 }
 
 .sidebar {
-  max-width: 300px !important;
+  /* max-width: 300px !important; */
   height: 100vh;
   padding: 1em;
   background-color: white;
@@ -30,6 +30,7 @@ main {
   flex-direction: column;
   position: relative;
   z-index: 3;
+  width: 500px;
 }
 
 .hambtn {
@@ -145,4 +146,11 @@ main {
   .header {
     visibility: hidden;
   }
+}
+
+.menu-item a {
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  display: flex;
 }

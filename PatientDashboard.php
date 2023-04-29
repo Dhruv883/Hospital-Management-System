@@ -1,7 +1,7 @@
 <?php 
   include('database.php');
-  session_unset();
-  session_destroy();
+  // session_unset();
+  // session_destroy();
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
   </head>
   <body>
     <main>
-      <div class="sidebar close" id="sidebar">
+      <div class="sidebar" id="sidebar">
         <div class="hambtn">
           <img
             src="images/hamburger-md-svgrepo-com.svg"
@@ -33,31 +33,31 @@
           </span>
         </div>
 
-        <div>
-          <span><img src="images/user-blue.svg" alt="" srcset="" /></span>
-          <span class="text">Profile</span>
-        </div>
-        <div>
-          <span
+        <div class="menu-item">
+          <a href="">
+            <span
             ><img src="images/appointment-blue.svg" alt="" srcset=""
           /></span>
           <span class="text">Appointments</span>
+          </a>
         </div>
-        <div>
-          <span
+
+        <div class="menu-item">
+         <a href="specialities.php">
+           <span
             ><img src="images/appointment-blue.svg" alt="" srcset=""
           /></span>
           <span class="text">Book Appointment</span>
+         </a>
         </div>
-        <div>
-          <span><img src="images/reports-blue.svg" alt="" srcset="" /></span>
-          <span class="text">Records</span>
-        </div>
-        <div>
-          <span
+
+        <div class="menu-item">
+         <a href="logout.php">
+           <span
             ><img src="images/logout-svgrepo-com.svg" alt="" srcset=""
           /></span>
-          <span class="text">Log Out</span>
+          <span class="text">Log Out</span> 
+         </a>
         </div>
       </div>
 
@@ -65,7 +65,7 @@
         <div class="header" id="header">
           <span>
             <span><img src="images/user-grey.svg" alt="" srcset="" /></span>
-            <span>User Name</span>
+            <span><?php  echo $_SESSION['patient']?></span>
           </span>
         </div>
         <div class="content">

@@ -1,6 +1,5 @@
 <?php 
   include('./partials/navbar.php');
-  include('./database.php');
 ?>
 
 <!DOCTYPE html>
