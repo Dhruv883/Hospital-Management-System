@@ -27,21 +27,13 @@
           </span>
         </div>
 
-        <div>
-          <span><img src="images/user-blue.svg" alt="" srcset="" /></span>
-          <span class="text">Profile</span>
-        </div>
-        <div>
-          <span
-            ><img src="images/appointment-blue.svg" alt="" srcset=""
-          /></span>
-          <span class="text">Appointments</span>
-        </div>
-        <div>
-          <span
+        <div class="logout">
+          <a href="doclogout.php">
+            <span
             ><img src="images/logout-svgrepo-com.svg" alt="" srcset=""
           /></span>
           <span class="text">Log Out</span>
+          </a>
         </div>
       </div>
 
