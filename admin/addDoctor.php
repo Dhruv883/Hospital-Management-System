@@ -1,3 +1,56 @@
+<?php 
+  include('../database.php');
+
+  if (isset($_POST['submit'])) {
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $speciality = $_POST['speciality'];
+    $age = $_POST['age'];
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $description = $_POST['description'];
+    $experience = $_POST['experience'];
+
+     $exists = false;
+     $usercopy = "SELECT * FROM doctor WHERE username='$username'";
+      if (mysqli_num_rows(mysqli_query($conn, $usercopy)) > 0) {
+        $exists = true;
+        echo "<script>alert('Username Already Exists!');</script>";
+      }
+      $emailcopy = "SELECT * FROM doctor WHERE email='$email'";
+      if (mysqli_num_rows(mysqli_query($conn, $emailcopy)) > 0) {
+        $exists = true;
+        echo "<script>alert('Email Already Exists!');</script>";
+      }
+      $spec = "SELECT * FROM speciality WHERE name = '$speciality'";
+      if (mysqli_num_rows(mysqli_query($conn, $emailcopy)) <= 0) {
+        
+        echo "<script>alert('Speciality doesnt Exist!');</script>";
+      }else{
+
+        
+        if (!$exists) {
+          
+          
+          
+          $sql = "INSERT INTO doctor (fname, lname, speciality, age, email, username, password, description, experience) VALUES ('$fname', '$lname', '$speciality', $age, '$email', '$username', '$password', '$description', $experience)";
+          
+          $result = mysqli_query($conn, $sql);
+          
+          if(!$result){
+            echo 'Failed to connect';
+          }else{
+            header("Location:http://localhost/Hospital-Management-System/admin/doctors.php");
+          }
+          
+          
+        }
+      }
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,12 +64,12 @@
     <main>
       <header>
         <a href="index.html"
-          ><img src="images/logo.png" alt="Docplus" /><span class="ocplus"
+          ><img src="../images/logo.png" alt="Docplus" /><span class="ocplus"
             >ocplus</span
           ></a
         >
       </header>
-      <form action="">
+      <form action="addDoctor.php" method = "post">
         <div class="mainContent">
           <div class="content-1">
             <div class="content">
@@ -73,8 +126,30 @@
             </div>
           </div>
           <div class="content-2">
-            <div class="title">Add Doctor</div>
             <div class="content">
+              <div class="input">
+                <span>Experience</span>
+                <input
+                  type="number"
+                  placeholder="Experience"
+                  id="experience"
+                  name="experience"
+                  value = "0"
+                  min = "0"
+                  required
+                />
+              </div>
+              <div class="input">
+                <span>Decsription</span>
+                <input
+                  type="text"
+                  placeholder="Description"
+                  id="description"
+                  name="description"
+                  max = "300"
+                  required
+                />
+              </div>
               <div class="input">
                 <span>Username</span>
                 <input
@@ -95,18 +170,8 @@
                   required
                 />
               </div>
-              <div class="input">
-                <span>Confirm Password</span>
-                <input
-                  type="password"
-                  placeholder="Password"
-                  id="cpassword"
-                  name="cpassword"
-                  required
-                />
-              </div>
               <div class="input submit">
-                <input type="submit" value="Add Doctor" name="" />
+                <input type="submit" value="Add Doctor" name="submit" />
               </div>
               <div class="signUp input"></div>
             </div>

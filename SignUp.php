@@ -40,7 +40,7 @@ if (isset($_POST['submitbtn'])) {
           if(!$result){
           echo 'Failed to connect';
           }else{
-            header("Location:http://localhost/Hospital-Management-System/SignIn.html");
+            header("Location:http://localhost/Hospital-Management-System/SignIn.php");
           }
 
         }
