@@ -1,3 +1,10 @@
+<?php 
+    require('./database.php');
+     if (!isset($_SESSION['doctor'])) {
+            header("Location:http://localhost/Hospital-Management-System/DoctorSignIn.php");
+      }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
