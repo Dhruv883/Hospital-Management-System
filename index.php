@@ -112,7 +112,7 @@
               </div>
             </div>
           </a>
-          <a href="doctors.php">
+          <a href="doctors.php?id=0">
             <div class="steps step2">
               <div class="img">
                 <img src="images/calendar-svgrepo-com.svg" alt="" srcset="" />
