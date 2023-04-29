@@ -119,7 +119,7 @@ main {
   justify-content: center;
   text-align: center;
   box-shadow: 0 5px 10px rgb(0 0 0 / 16%);
-  border-radius: 10px;
+  border-radius: 2px;
   transition: 0.1s;
 }
 

@@ -15,7 +15,6 @@
   <body>
 
     <?php 
-    include('./database.php');
       if (isset($_GET['id'])) {
         $id = $_GET['id'];
         $sql = "SELECT * FROM speciality where id = '$id'";
@@ -36,7 +35,7 @@
           </div>
         <div class="vl"></div>
         <div class="bookappointment">
-        <a href="Booking.html"><button>Book an Appointment</button></a>
+        <a href="Booking.php"><button>Book an Appointment</button></a>
         </div>
         </div>
         

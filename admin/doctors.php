@@ -35,7 +35,7 @@
                               <div class="name">'.$speciality.'</div>
                               <div class="btns"> 
                                     <div class="update"><a href="updateDoc.php?id='.$id.'"><button>Update</button></a></div>
-                                    <div class="delete"><a href="deleteDoc.php?id='.$id.'"><button>Delete</button></a></div>
+                                    <div class="update"><a href="deleteDoc.php?id='.$id.'"><button>Delete</button></a></div>
                               </div>
                               </div>
                               ';

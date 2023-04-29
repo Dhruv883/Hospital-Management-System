@@ -24,7 +24,7 @@
         echo "<script>alert('Email Already Exists!');</script>";
       }
       $spec = "SELECT * FROM speciality WHERE name = '$speciality'";
-      if (mysqli_num_rows(mysqli_query($conn, $emailcopy)) <= 0) {
+      if (mysqli_num_rows(mysqli_query($conn, $spec)) <= 0) {
         
         echo "<script>alert('Speciality doesnt Exist!');</script>";
       }else{
