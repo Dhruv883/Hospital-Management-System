@@ -8,7 +8,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="Booking.css" />
     <link
       rel="stylesheet"
@@ -42,13 +41,52 @@
 
       <!-- ---------------------------------- -->
       <div class="schedule">
-        
-         <div class="month">
-            <label class="hidden">
-                  <input type="date" name="" id=""/>
-                  Select Date And Time
-            </label>
-         </div>
+        <div class="dates" id="calendar">
+          <div class="month">
+            <span>
+              <img
+                src="images/left-circle-svgrepo-com.svg"
+                alt=""
+                srcset=""
+                id="prevmonth"
+              />
+            </span>
+            <span id="month"> </span>
+            <span>
+              <img
+                src="images/right-circle-svgrepo-com.svg"
+                alt=""
+                srcset=""
+                id="nextmonth"
+              />
+            </span>
+          </div>
+          <!-- ---------------------------------- -->
+          <div class="weekdays" id="days">
+            <span>
+              <img
+                src="images/left-circle-svgrepo-com.svg"
+                alt=""
+                srcset=""
+                id="prevday"
+                class="border"
+              />
+            </span>
+            <span class="swiper">
+              <div class="swiper-wrapper" id="swiper-wrapper"></div>
+            </span>
+            <span>
+              <img
+                src="images/right-circle-svgrepo-com.svg"
+                alt=""
+                srcset=""
+                id="nextday"
+                class="border"
+              />
+            </span>
+          </div>
+
+          <!-- ------------------SLOTS---------------- -->
 
 
           <div class="slots">
@@ -86,12 +124,12 @@
             </div>
           </div>
         </div>
-        
+
         <div class="book">Book Appointment</div>
       </div>
     </main>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./Booking.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./Booking.js"></script>
   </body>
 </html>
