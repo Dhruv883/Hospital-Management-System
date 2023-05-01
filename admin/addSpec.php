@@ -66,12 +66,25 @@
               required
             />
             </div>
+            <div class="name input">
+            <input
+              type="hidden"
+              
+            />
+            </div>
 
             <div class="">
             <label class="custom-file-upload">
             <input type="file"  name="specimg"/>
             Upload Speciality Image
             </label>
+            </div>
+
+            <div class="name input">
+            <input
+              type="hidden"
+              
+            />
             </div>
 
             <div class="addbtn"><input type="submit" value="ADD" name="submit" /></div>
