@@ -21,98 +21,37 @@
         $sql = "SELECT * FROM speciality where id = '$id'";
         $res = mysqli_query($conn , $sql);
         $row = mysqli_fetch_assoc($res);
-        $name = $row['name'];
-        
-        echo '<div class="speciality">'.$name.'</div>
+        $specname = $row['name']; 
 
-      <div class="list">
-      <div class="doc">
+        $query = "SELECT * FROM doctor WHERE speciality = '$specname'";
+        $result = mysqli_query($conn, $query);
+        // $id = 1;
+        echo '<div class="speciality">'.$specname.'</div>';
+        echo '<div class="list">';
+        while ($row = mysqli_fetch_assoc($result)) {
+          $fname = $row['fname'];
+          $lname = $row['lname'];
+          $docid = $row['docid'];
+         echo '
+        <div class="doc">
           <div><img src="images/doctor.png" alt="" srcset="" /></div>
           <div class="docinfo">
-          <span class="name">Dr. Xyz Abc</span>
-            <span>Pediatrician</span>
-            <span>0 YEAR Experience</span>
-            <span>MBBS</span>
+          <span class="name">Dr. '.$fname." ".$lname.'</span>
+            <span>'.$specname.'</span>
+            <span>'.$row['experience'].' YEAR Experience</span>
+            
           </div>
         <div class="vl"></div>
         <div class="bookappointment">
-        <a href="Booking.php"><button>Book an Appointment</button></a>
+        <a href="Booking.php?docid='.$docid.'"><button>Book an Appointment</button></a>
         </div>
-        </div>
-        
-        <div class="doc">
-        <div><img src="images/doctor.png" alt="" srcset="" /></div>
-        <div class="docinfo">
-          <span class="name">Dr. Xyz Abc</span>
-          <span>Pediatrician</span>
-          <span>0 YEAR Experience</span>
-          <span>MBBS</span>
-        </div>
-        <div class="vl"></div>
-        <div class="bookappointment">
-        <a href="Booking.html"><button>Book an Appointment</button></a>
-        </div>
-        </div>
-        
-      <div class="doc">
-      <div><img src="images/doctor.png" alt="" srcset="" /></div>
-        <div class="docinfo">
-          <span class="name">Dr. Xyz Abc</span>
-          <span>Pediatrician</span>
-          <span>0 YEAR Experience</span>
-          <span>MBBS</span>
-          </div>
-        <div class="vl"></div>
-        <div class="bookappointment">
-          <a href="Booking.html"><button>Book an Appointment</button></a>
-          </div>
-      </div>
-      
-      <div class="doc">
-      <div><img src="images/doctor.png" alt="" srcset="" /></div>
-        <div class="docinfo">
-        <span class="name">Dr. Xyz Abc</span>
-        <span>Pediatrician</span>
-        <span>0 YEAR Experience</span>
-        <span>MBBS</span>
-        </div>
-        <div class="vl"></div>
-        <div class="bookappointment">
-        <a href="Booking.html"><button>Book an Appointment</button></a>
-        </div>
-        </div>
-      
-      <div class="doc">
-        <div><img src="images/doctor.png" alt="" srcset="" /></div>
-        <div class="docinfo">
-        <span class="name">Dr. Xyz Abc</span>
-        <span>Pediatrician</span>
-        <span>0 YEAR Experience</span>
-        <span>MBBS</span>
-        </div>
-        <div class="vl"></div>
-        <div class="bookappointment">
-        <a href="Booking.html"><button>Book an Appointment</button></a>
-        </div>
-        </div>
-      
-        <div class="doc">
-        <div><img src="images/doctor.png" alt="" srcset="" /></div>
-        <div class="docinfo">
-        <span class="name">Dr. Xyz Abc</span>
-        <span>Pediatrician</span>
-        <span>0 YEAR Experience</span>
-        <span>MBBS</span>
-        </div>
-        <div class="vl"></div>
-        <div class="bookappointment">
-        <a href="Booking.html"><button>Book an Appointment</button></a>
-        </div>
-        </div>
-        ';
+        </div>';
+         
+        }
+ 
+        '</div>';
       }
         ?>
-    </div>
   </body>
   </html>
   

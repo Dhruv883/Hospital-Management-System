@@ -154,7 +154,7 @@ a {
   font-family: "Montserrat", sans-serif;
   background: var(--sky-blue);
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 5px;
   width: fit-content;
 }
 

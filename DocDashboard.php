@@ -3,6 +3,14 @@
     if (!isset($_SESSION['doctor'])) {
         header("Location:http://localhost/Hospital-Management-System/DoctorSignIn.php");
     }
+
+    // if (isset($_POST['status'])) {
+    // $status = $_POST['status'];
+    // $order_id = $_POST['order_id'];
+    // $customer_id = $_POST['customer_id'];
+    // $sql = "UPDATE appointment SET status = '$status' WHERE docid = $order_id AND patid =$customer_id";
+    // $res = mysqli_query($conn, $sql);
+  // }
 ?>
 
 <!DOCTYPE html>
@@ -48,16 +56,49 @@
         <div class="header" id="header">
           <span>
             <span><img src="images/user-grey.svg" alt="" srcset="" /></span>
-            <span>Doctor Name</span>
+            <span><?php  echo $_SESSION['doctor']?></span>
           </span>
         </div>
         <div class="content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
-          quam blanditiis possimus recusandae dolore et eos odit voluptates
-          perspiciatis saepe assumenda labore beatae quia, esse nemo modi dolor
-          quo dolorem sequi cum. Tenetur architecto vitae ullam dolorum
-          voluptatibus aliquid modi consectetur, illo fugiat magni omnis harum
-          quidem, et voluptatum vero.
+          <?php 
+              $username = $_SESSION['doctor'];
+              $sql = "SELECT * FROM  doctor WHERE username = '$username'";
+              $res = mysqli_query($conn ,$sql);
+              $docid = mysqli_fetch_assoc($res)['docid'];
+
+              $sql = "SELECT * FROM appointment WHERE docid = $docid";
+              $result = mysqli_query($conn, $sql);
+
+              while ($row = mysqli_fetch_assoc($result)) {
+                  $query = "SELECT * FROM patient WHERE patientid = $row[patid]";
+                  $rq = mysqli_query($conn, $query);
+                  $pat = mysqli_fetch_assoc($rq);
+                  $fname = $pat['fname'];
+                  $lname = $pat['lname'];
+                echo'
+                    <div class="appointment">
+            <div class="appid">'.$row['apid'].'</div>
+            <div class="pname">'.$fname." ".$lname.'</div>
+            <div class="apdate">'.$row['date'].'</div>
+            <div class="aptime">'.$row['slot'].'</div>
+            <div class="apstatus">'.$row['status'].'</div>
+            <form id = "status-form" action="DocDashboard.php" method="post" onchange="submit()">
+        
+              <input type="hidden" name="apid" value="">
+
+              <select name="status" id="status">
+              <option value="" selected disabled hidden>
+              Update Status
+              </option>
+              <option value="Active">Active</option>
+              <option value="Completed">Completed</option>
+              </select>
+            </form>
+          </div>
+                ';
+              }
+          ?>
+          
         </div>
       </div>
     </main>

@@ -5,6 +5,11 @@
   --beige: #f8f8f8;
   --blue: #339589;
   --grey: #848e91;
+  --yellow: #fcbf02;
+  --bgColor: #037272;
+  --light-blue: #edffff;
+  --sky-blue: #3c9090;
+  --dark-grey: #45494c;
 }
 
 * {
@@ -100,6 +105,7 @@ main {
 
 .main {
   height: 100vh;
+  width: 94vw;
   background-color: #fafafa;
   max-width: calc(100vw - 80px);
 }
@@ -148,9 +154,42 @@ main {
     width: 250px;
   }
 }
+.appointment {
+  border-bottom: 2px solid black;
+  display: flex;
+  padding: 1em;
+  font-size: 1.5em;
+}
 
-@media (max-width: 520px) {
-  .header {
-    visibility: hidden;
-  }
+.appointment div {
+  padding: 5px 0;
+}
+.appid {
+  width: 75px;
+}
+
+.pname {
+  width: 250px;
+}
+
+.apdate {
+  width: 200px;
+}
+
+.aptime {
+  width: 150px;
+}
+
+.apstatus {
+  width: 175px;
+}
+
+#status-form select {
+  background-color: var(--sky-blue);
+  color: white;
+  padding: 5px 5px;
+  width: 200px;
+  font-size: 1em;
+  border: none;
+  border-radius: 2px;
 }

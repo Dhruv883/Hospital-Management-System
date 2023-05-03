@@ -5,8 +5,6 @@
 
     $username = $_POST['username'];
     $password = $_POST['password'];
-    // echo 'here';
-    // die();
     $sql = "SELECT * FROM patient WHERE username = '$username' AND password = '$password'";
     $res = mysqli_query($conn , $sql);
     $rows = mysqli_num_rows($res);
