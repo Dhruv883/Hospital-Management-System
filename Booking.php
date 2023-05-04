@@ -55,12 +55,21 @@ if (isset($_POST['submit'])) {
       <div class="docInfo">
         <div class="doc">
           <div><img src="images/doctor.png" alt="" srcset="" /></div>
-          <div class="docinfo">
-            <span class="name">Dr. Xyz Abc</span>
-            <span>Pediatrician</span>
-            <span>0 Year Experience</span>
-            <span>MBBS</span>
-          </div>
+          <?php 
+            $docid = $_GET['docid'];
+            $sql = "SELECT * FROM doctor WHERE docid = $docid";
+            $res = mysqli_query($conn, $sql);
+
+            $row = mysqli_fetch_assoc($res);
+            $fname = $row['fname'];
+            $lname = $row['lname'];
+            echo '
+            <div class="docinfo">
+              <span class="name">Dr. '.$fname. " ".$lname.'</span>
+              <span>'.$row['speciality'].'</span>
+              <span>'.$row['experience'].' Years Experience</span>
+            </div>';
+            ?>
         </div>
 
         <div class="about">
@@ -97,8 +106,7 @@ if (isset($_POST['submit'])) {
                 <a href="Booking.php?docid='.$docid.'&time=11:30" class=""><span class="slot">11:30 AM</span></a>
               </div>
               <div class="afternoon box">
-              <a href="Booking.php?docid='.$docid.'&time=12:30" class=""><span class="slot<?php if ($_GET[\'time\'] == "12:30") { echo \'active\'; } ?>12:30 PM</span></a>
-
+              <a href="Booking.php?docid='.$docid.'&time=12:30" class=""><span class="slot">12:30 PM</span></a>
               <a href="Booking.php?docid='.$docid.'&time=13:00" class=""><span class="slot">01:00 PM</span></a>
               <a href="Booking.php?docid='.$docid.'&time=13:30" class=""><span class="slot">01:30 PM</span></a>
               <a href="Booking.php?docid='.$docid.'&time=14:00" class=""><span class="slot">02:00 PM</span></a>
@@ -111,7 +119,7 @@ if (isset($_POST['submit'])) {
               </div>
 
               <div class="evening box">
-               <a href="Booking.php?docid='.$docid.'&time=18:00" class=""><span class="slot active">06:00 PM</span></a>
+               <a href="Booking.php?docid='.$docid.'&time=18:00" class=""><span class="slot">06:00 PM</span></a>
                <a href="Booking.php?docid='.$docid.'&time=18:30" class=""><span class="slot">06:30 PM</span></a>
                <a href="Booking.php?docid='.$docid.'&time=19:00" class=""><span class="slot">07:00 PM</span></a>
                <a href="Booking.php?docid='.$docid.'&time=19:30" class=""><span class="slot">07:30 PM</span></a>

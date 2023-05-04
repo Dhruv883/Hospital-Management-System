@@ -38,7 +38,7 @@
           <div class="docinfo">
           <span class="name">Dr. '.$fname." ".$lname.'</span>
             <span>'.$specname.'</span>
-            <span>'.$row['experience'].' YEAR Experience</span>
+            <span>'.$row['experience'].' Years Experience</span>
             
           </div>
         <div class="vl"></div>
