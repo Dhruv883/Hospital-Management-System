@@ -69,13 +69,35 @@
           </span>
         </div>
         <div class="content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
-          quam blanditiis possimus recusandae dolore et eos odit voluptates
-          perspiciatis saepe assumenda labore beatae quia, esse nemo modi dolor
-          quo dolorem sequi cum. Tenetur architecto vitae ullam dolorum
-          voluptatibus aliquid modi consectetur, illo fugiat magni omnis harum
-          quidem, et voluptatum vero.
-        </div>
+          <?php 
+              $username = $_SESSION['patient'];
+              $sql = "SELECT * FROM patient WHERE username = '$username'";
+              $res = mysqli_query($conn, $sql);
+
+              $patid = mysqli_fetch_assoc($res)['patientid'];
+
+              $sql1 = "SELECT * FROM appointment WHERE patid = $patid";
+              $result = mysqli_query($conn, $sql1);
+              while ($row = mysqli_fetch_assoc($result)) {
+                $docid = $row['docid'];
+                $query = "SELECT * FROM doctor where docid = $docid";
+                $re = mysqli_query($conn, $query);
+                $doc = mysqli_fetch_assoc($re);
+                $fname = $doc['fname'];
+                $lname = $doc['lname'];
+                echo '
+                <div class="ap">
+                  <div class="apid">'.$row['apid'].'</div>
+                  <div class="docname">Dr. '.$fname." ". $lname.'</div>
+                  <div class="docspeciality">'.$doc['speciality'].'</div>
+                  <div class="apdate">'.$row['date'].'</div>
+                  <div class="apslot">'.$row['slot'].'</div>
+                  <div class="apstatus">'.$row['status'].'</div>
+                </div>
+              </div>';
+              }
+          ?>
+
       </div>
     </main>
 

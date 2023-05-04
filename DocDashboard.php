@@ -4,13 +4,12 @@
         header("Location:http://localhost/Hospital-Management-System/DoctorSignIn.php");
     }
 
-    // if (isset($_POST['status'])) {
-    // $status = $_POST['status'];
-    // $order_id = $_POST['order_id'];
-    // $customer_id = $_POST['customer_id'];
-    // $sql = "UPDATE appointment SET status = '$status' WHERE docid = $order_id AND patid =$customer_id";
-    // $res = mysqli_query($conn, $sql);
-  // }
+    if (isset($_POST['status'])) {
+    $status = $_POST['status'];
+    $apid = $_POST['apid'];
+    $sql = "UPDATE appointment SET status = '$status' WHERE apid = $apid ";
+    $res = mysqli_query($conn, $sql);
+  }
 ?>
 
 <!DOCTYPE html>
@@ -84,13 +83,14 @@
             <div class="apstatus">'.$row['status'].'</div>
             <form id = "status-form" action="DocDashboard.php" method="post" onchange="submit()">
         
-              <input type="hidden" name="apid" value="">
+              <input type="hidden" name="apid" value="'.$row['apid'].'">
 
               <select name="status" id="status">
               <option value="" selected disabled hidden>
               Update Status
               </option>
               <option value="Active">Active</option>
+              <option value="Cancelled">Cancelled</option>
               <option value="Completed">Completed</option>
               </select>
             </form>
