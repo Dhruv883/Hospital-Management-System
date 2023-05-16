@@ -48,4 +48,4 @@ To use Docplus, follow these steps:-
 ![Screenshot (194)](https://user-images.githubusercontent.com/98738047/236803451-8c1c67ad-23bb-44d8-9854-ef22afe5a183.png)
 
 # Credits
-The Expense Tracker was created by [Dhruv Dedhia](https://github.com/Dhruv883) and [Manas Hardikar](https://github.com/Manas600) as a project for Web Programming Lab under the supervision of Miss Rohini Nair.
+The Hospital Management System was created by [Dhruv Dedhia](https://github.com/Dhruv883) and [Manas Hardikar](https://github.com/Manas600) as a project for Web Programming Lab under the supervision of Miss Rohini Nair.
